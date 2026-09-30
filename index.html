@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Perth Anniversary ~20 Options — Sunday 4 Oct 2026</title>
-<meta name="description" content="About 20 distinct Sunday 4 October 2026 Perth anniversary paths for a couple — filterable, researched live."/>
+<title>Quiet Perth Anniversary — Sun 4 Oct 2026 · ~20 options</title>
+<meta name="description" content="About 20 low-crowd, food-led Sunday paths for an introverted couple in Perth — Asian restaurants, coffee, calm nature."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet"/>
@@ -13,486 +13,429 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--canvas);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:16px;line-height:1.55}
 h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.25;margin:0 0 .5em}
-h1{font-size:clamp(1.85rem,4vw,2.6rem);letter-spacing:-.02em}h2{font-size:clamp(1.35rem,2.4vw,1.75rem)}h3{font-size:1.05rem}
+h1{font-size:clamp(1.75rem,3.8vw,2.45rem);letter-spacing:-.02em}h2{font-size:clamp(1.3rem,2.3vw,1.65rem)}h3{font-size:1.02rem}
 p{margin:0 0 .85em}a{color:var(--accent);text-underline-offset:2px}a:hover{color:#a3481b}
 .wrap{max-width:1100px;margin:0 auto;padding:0 1.15rem 4rem}
-.hero{padding:2.75rem 0 1.35rem;border-bottom:1px solid var(--border);margin-bottom:1.25rem}
-.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:.65rem}
-.lede{font-size:1.08rem;color:var(--muted);max-width:46rem}
-.meta{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
-.chip{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:.28rem .7rem;font-size:.8rem;color:var(--muted)}
-.soft{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:1rem 1.15rem;box-shadow:var(--shadow);margin:1rem 0 1.35rem}
+.hero{padding:2.6rem 0 1.25rem;border-bottom:1px solid var(--border);margin-bottom:1.15rem}
+.eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.lede{font-size:1.05rem;color:var(--muted);max-width:44rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.chip{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:.26rem .65rem;font-size:.78rem;color:var(--muted)}
+.soft{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:1rem 1.15rem;box-shadow:var(--shadow);margin:1rem 0 1.25rem}
 .soft .lab{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.filters{position:sticky;top:0;z-index:30;background:rgba(247,246,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);margin:0 -1.15rem 1.25rem;padding:.7rem 1.15rem}
-.filt-row{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
-.filt{appearance:none;border:1px solid var(--border);background:var(--surface);color:var(--muted);font:inherit;font-weight:600;font-size:.78rem;padding:.4rem .75rem;border-radius:999px;cursor:pointer}
+.filters{position:sticky;top:0;z-index:30;background:rgba(247,246,243,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);margin:0 -1.15rem 1.2rem;padding:.65rem 1.15rem}
+.filt-row{display:flex;flex-wrap:wrap;gap:.32rem;align-items:center}
+.filt{appearance:none;border:1px solid var(--border);background:var(--surface);color:var(--muted);font:inherit;font-weight:600;font-size:.76rem;padding:.38rem .7rem;border-radius:999px;cursor:pointer}
 .filt:hover{border-color:var(--accent);color:var(--ink)}
 .filt.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.count{font-size:.82rem;color:var(--muted);margin-left:.35rem}
+.count{font-size:.8rem;color:var(--muted);margin-left:.3rem}
 .grid{display:grid;gap:1rem;grid-template-columns:1fr}
 @media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.15rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.45rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.05rem 1.1rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.4rem}
 .card.hidden{display:none}
 .card-top{display:flex;justify-content:space-between;gap:.5rem;align-items:flex-start}
-.num{font-size:.75rem;font-weight:700;color:var(--accent);letter-spacing:.04em}
-.badge{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--accent-soft);color:var(--accent);padding:.18rem .45rem;border-radius:5px;white-space:nowrap}
+.num{font-size:.74rem;font-weight:700;color:var(--accent)}
+.badge{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--accent-soft);color:var(--accent);padding:.16rem .42rem;border-radius:5px}
 .badge.pick{background:#1a1a1a;color:#fff}
-.tags{display:flex;flex-wrap:wrap;gap:.3rem}
-.tag{font-size:.68rem;font-weight:600;color:var(--muted);background:#efece6;padding:.12rem .4rem;border-radius:4px}
-.why{color:var(--muted);font-size:.92rem;margin:0}
-.details{font-size:.9rem}
-.details summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none}
+.tags{display:flex;flex-wrap:wrap;gap:.28rem}
+.tag{font-size:.66rem;font-weight:600;color:var(--muted);background:#efece6;padding:.1rem .38rem;border-radius:4px}
+.why{color:var(--muted);font-size:.91rem;margin:0}
+.details{font-size:.89rem}
+.details summary{cursor:pointer;font-weight:600;list-style:none}
 .details summary::-webkit-details-marker{display:none}
 .details summary::after{content:" ▾";color:var(--accent)}
 .details[open] summary::after{content:" ▴"}
-.details .body{margin-top:.65rem;padding-top:.65rem;border-top:1px solid var(--border)}
-.bookable{background:var(--canvas);border:1px dashed var(--border);border-radius:8px;padding:.55rem .7rem;margin:.4rem 0;font-size:.86rem}
+.details .body{margin-top:.6rem;padding-top:.6rem;border-top:1px solid var(--border)}
+.bookable{background:var(--canvas);border:1px dashed var(--border);border-radius:8px;padding:.5rem .65rem;margin:.35rem 0;font-size:.85rem}
 .bookable strong{display:block}
-.kv{margin:.35rem 0;font-size:.88rem}
-.kv b{color:var(--ink)}
-.flag{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;padding:.1rem .35rem;border-radius:3px;margin-right:.25rem}
-.flag.ok{background:#e3f0e9;color:var(--ok)}.flag.warn{background:#f7efd8;color:var(--warn)}.flag.bad{background:#f4e4e4;color:var(--closed)}.flag.u{background:#ececec;color:var(--muted)}
-.section{margin:2.2rem 0 1rem} .section h2{border-bottom:1px solid var(--border);padding-bottom:.35rem}
-.card-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.2rem;margin-bottom:1rem;box-shadow:var(--shadow)}
-ul.clean{margin:.35rem 0 0;padding-left:1.1rem}ul.clean li{margin-bottom:.35rem}
-.callout{background:#f7efd8;border:1px solid #e6d19a;border-radius:var(--radius);padding:1rem 1.1rem;margin:1rem 0}
-footer{margin-top:2.5rem;padding-top:1.1rem;border-top:1px solid var(--border);font-size:.84rem;color:var(--muted)}
+.kv{margin:.32rem 0;font-size:.87rem}
+.flag{display:inline-block;font-size:.64rem;font-weight:700;text-transform:uppercase;padding:.08rem .32rem;border-radius:3px;margin-right:.22rem}
+.flag.ok{background:#e3f0e9;color:var(--ok)}.flag.warn{background:#f7efd8;color:var(--warn)}.flag.bad{background:#f4e4e4;color:var(--closed)}
+.section{margin:2.1rem 0 1rem}.section h2{border-bottom:1px solid var(--border);padding-bottom:.3rem}
+.card-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.05rem 1.15rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+ul.clean{margin:.3rem 0 0;padding-left:1.05rem}ul.clean li{margin-bottom:.32rem}
+.callout{background:#f7efd8;border:1px solid #e6d19a;border-radius:var(--radius);padding:.95rem 1.05rem;margin:1rem 0}
+.changed{background:#efe8e1;border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem;margin:1rem 0;font-size:.92rem;color:var(--muted)}
+footer{margin-top:2.4rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.83rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="hero">
   <div class="eyebrow">Perth · Couple of 2 · Sunday 4 October 2026 · AWST</div>
-  <h1>~20 anniversary paths to compare</h1>
-  <p class="lede">Full days and half-day + dinner combos across romantic, Rottnest, Swan Valley, Fremantle, spa, kayak, cultural rain days, beaches and food. Filter by vibe, open a card for bookables. Soft picks are guidance only — every option is first-class.</p>
+  <h1>Quiet anniversary paths — food, coffee, calm places</h1>
+  <p class="lede">Rewritten for an introverted couple who care about excellent food (especially Asian), good coffee, and low-crowd settings. Nature without tour buses. Small rooms over spectacle. About twenty options — filter, compare, book one dinner tonight.</p>
   <div class="meta">
     <span class="chip">20 options</span>
-    <span class="chip">Live research · Oct 2026</span>
-    <span class="chip">Filter · expand · compare</span>
+    <span class="chip">Low-crowd bias</span>
+    <span class="chip">Asian food prioritised</span>
+    <span class="chip">Live research</span>
   </div>
 </header>
 
 <section class="soft">
-  <div class="lab">Soft picks (not the only answers)</div>
-  <p style="margin:0"><strong>#1</strong> Madeleine romantic day · <strong>#4</strong> Rottnest adventure · <strong>#5</strong> Spa + Sandalford luxury. Use filters below to find your fit.</p>
+  <div class="lab">Soft top three for this couple</div>
+  <p style="margin:0"><strong>#1</strong> Nobu dinner after a quiet park morning · <strong>#2</strong> Silks yum cha + Sunday afternoon tea · <strong>#3</strong> Rojiura Curry SAMURAI — small handmade room. Everything else is still first-class; these three match quiet + excellent Asian food most cleanly.</p>
 </section>
+
+<div class="changed">
+  <strong>What changed vs the previous slate:</strong> Demoted/removed loud waterfront steakhouse-as-romance, dinner cruises, stadium tours, group kayak tours, and generic “roses &amp; champagne” framing. Elevated Nobu, Silks, SAMURAI, Vietnamese/Malaysian/Korean options, specialty coffee mornings, bookshops, galleries/cinema, private picnic, and self-drive Swan Valley lunch. Rottnest kept only as an optional calm-framed card with a crowd warning.
+</div>
 
 <div class="filters" role="navigation" aria-label="Filter options">
   <div class="filt-row" id="filters">
     <button type="button" class="filt on" data-filter="all">All</button>
-    <button type="button" class="filt" data-filter="romantic">Romantic</button>
-    <button type="button" class="filt" data-filter="adventure">Adventure</button>
-    <button type="button" class="filt" data-filter="luxury">Luxury / spa</button>
+    <button type="button" class="filt" data-filter="asian">Asian food</button>
+    <button type="button" class="filt" data-filter="japanese">Japanese</button>
+    <button type="button" class="filt" data-filter="chinese">Chinese</button>
+    <button type="button" class="filt" data-filter="korean">Korean</button>
+    <button type="button" class="filt" data-filter="vietnamese">Vietnamese</button>
+    <button type="button" class="filt" data-filter="malaysian">Malaysian</button>
+    <button type="button" class="filt" data-filter="coffee">Coffee</button>
+    <button type="button" class="filt" data-filter="nature">Nature</button>
+    <button type="button" class="filt" data-filter="quiet">Quiet-first</button>
     <button type="button" class="filt" data-filter="valley">Swan Valley</button>
     <button type="button" class="filt" data-filter="freo">Fremantle</button>
-    <button type="button" class="filt" data-filter="food">Food-led</button>
-    <button type="button" class="filt" data-filter="outdoor">Outdoor</button>
     <button type="button" class="filt" data-filter="indoor">Indoor / rain</button>
-    <button type="button" class="filt" data-filter="waterfront">Waterfront</button>
-    <button type="button" class="filt" data-filter="budget">Budget</button>
     <button type="button" class="filt" data-filter="spa">Spa</button>
-    <button type="button" class="filt" data-filter="cultural">Cultural</button>
+    <button type="button" class="filt" data-filter="books">Books / film</button>
     <span class="count" id="count"></span>
   </div>
 </div>
 
 <div class="grid" id="grid">
 
-<article class="card" data-tags="romantic food outdoor" data-id="1">
+<article class="card" data-tags="asian japanese nature coffee quiet" data-id="1">
   <div class="card-top"><span class="num">Option 01</span><span class="badge pick">Soft pick</span></div>
-  <h3>Romantic classic: State Buildings brunch → Kings Park sunset → Madeleine</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">food</span><span class="tag">outdoor</span></div>
-  <p class="why">Intimate Highgate French dinner after golden-hour park views — no ferry risk, Sunday-open end-to-end.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> 08:30 Petition brunch → optional Perth Mint gift (Sun 9–5) → Kings Park afternoon/sunset → 19:00 Madeleine.</p>
-      <div class="bookable"><strong>Petition</strong>State Buildings · Sat–Sun 8am–9pm · +61 8 6168 7888<br><a href="https://statebuildings.com/venues/petition" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Madeleine</strong>487 Beaufort St · Sun from 3pm · online bookings<br><a href="https://www.madeleineonbeaufort.com.au/bookings" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Perth Mint Shop</strong>310 Hay St · Sun 9–5 · 1800 926 468<br><a href="https://www.perthmint.com/visit/visitor-information/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $300–600 (degustation pushes higher)</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Madeleine Sat–Sun 3pm–late. Wildflower / Print Hall / Lalla Rookh CLOSED Sun — do not book those.</p>
-      <p class="kv"><b>Backup:</b> Rain → Boola Bardip + AGWA then Madeleine. Madeleine full → Frasers or 6HEAD.</p>
-    </div>
-  </details>
+  <h3>Quiet Japanese: early coffee → Kings Park loop → Nobu dinner</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">japanese</span><span class="tag">nature</span><span class="tag">coffee</span><span class="tag">quiet</span></div>
+  <p class="why">Excellent food first, conversation-friendly fine dining, nature without a tour. Nobu is polished Japanese (not a loud waterfront steakhouse). Go early to the park so you share it with dog-walkers, not wedding photographers.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Full day, unhurried</p>
+    <p class="kv"><b>Day plan:</b> 07:30–08:30 specialty coffee + pastry (Highgate Mary Street Bakery or Cottesloe John Street — arrive before the 9–10am rush) → Kings Park quieter loops (Botanic Garden paths / less Fraser Ave selfie strip) → optional Perth Mint keepsake → 18:00 Nobu (request a calmer table away from sushi bar theatre if you prefer).</p>
+    <div class="bookable"><strong>Nobu Perth</strong>Crown Metropol · Lunch daily 12–2:30 · Dinner Sun 5:30–10pm · +61 8 9362 7551 · book ahead<br><a href="https://www.crownperth.com.au/restaurants/nobu" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Mary Street Bakery Highgate</strong>507 Beaufort St · listed 7am–3pm, 7 days · Offshoot coffee · 0499 509 300<br><a href="https://www.marystreetbakery.com.au/stores" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>John Street Cafe Cottesloe</strong>37 John St · Daily 7am–3pm · pines, short walk to beach · quieter than Marine Parade strip<br><a href="https://www.johnstreetcafe.com.au/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $450–800 (Nobu + coffee; Sunday surcharge applies at Nobu)</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Nobu open Sunday; 15% Sunday surcharge (10% Sat). Bookings essential. Park is free/public — no booking.</p>
+    <p class="kv"><b>Backup:</b> Nobu full → Argyle Japanese (Elizabeth Quay, quieter scale) or Silks. Rain → Boola Bardip + AGWA then Nobu.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic food outdoor waterfront" data-id="2">
-  <div class="card-top"><span class="num">Option 02</span><span class="badge">Half day + dinner</span></div>
-  <h3>Kings Park views + Frasers anniversary dinner</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">food</span><span class="tag">outdoor</span><span class="tag">waterfront</span></div>
-  <p class="why">Iconic park + river/city vista dining at Frasers — classic Perth milestone setting.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day + dinner</p>
-      <p class="kv"><b>Day plan:</b> Afternoon Synergy Parkland / Fraser Ave walk → sunset lookout → dinner Frasers (book window if possible).</p>
-      <div class="bookable"><strong>Frasers</strong>(08) 9482 0100 · reservations@frasersrestaurant.com.au · Mon–Sun 11:30am–late<br><a href="https://www.frasersrestaurant.com.au/restaurant/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $250–550</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Open daily. Sunday long-lunch culture exists; dinner also runs. Not on OpenTable — phone/email.</p>
-      <p class="kv"><b>Backup:</b> Frasers full → 6HEAD Elizabeth Quay. Wet → skip long park walk, drinks indoors at Frasers only.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian chinese quiet food" data-id="2">
+  <div class="card-top"><span class="num">Option 02</span><span class="badge pick">Soft pick</span></div>
+  <h3>Cantonese calm: Silks yum cha lunch → Sunday afternoon tea → soft evening</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">chinese</span><span class="tag">quiet</span><span class="tag">food</span></div>
+  <p class="why">Special-occasion Chinese without needing a party vibe. Yum cha done properly, then Silks’ Sunday afternoon tea window — linger, talk, no itinerary stress.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Food-led day</p>
+    <p class="kv"><b>Day plan:</b> 12:00 Silks lunch / yum cha → 14:30–17:00 afternoon tea (Sunday-only slot on Crown site) → short riverside walk at Burswood if energy · or home with leftovers of calm · optional light evening snack only.</p>
+    <div class="bookable"><strong>Silks</strong>Crown Metropol · Lunch Wed–Sun 12–2pm · Afternoon tea Sun 2:30–5pm · Dinner Wed/Thu/Sun 5:30–9pm · 1800 556 688<br><a href="https://www.crownhotels.com.au/perth/restaurants-bars/silks" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $280–550 (lunch + tea; higher if dinner too)</p>
+    <p class="kv"><span class="flag warn">Sunday</span> 15% Sunday surcharge at Silks. Afternoon tea is Sunday-specific — book. Dinner also runs Sunday but kitchen to 9pm.</p>
+    <p class="kv"><b>Backup:</b> Silks full → Nobu lunch same complex, or Chopsticks Viet Northbridge for a simpler Vietnamese meal.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic food waterfront" data-id="3">
-  <div class="card-top"><span class="num">Option 03</span><span class="badge">Half day + dinner</span></div>
-  <h3>Elizabeth Quay waterfront + 6HEAD steak dinner</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">food</span><span class="tag">waterfront</span></div>
-  <p class="why">Easy CBD date: quay stroll, Bell Tower area photos, then premium steakhouse with river views.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day + dinner</p>
-      <p class="kv"><b>Day plan:</b> Late afternoon EQ → 18:30/19:00 6HEAD. Optional Sun lunch slot with live music 12:30–3:30 instead.</p>
-      <div class="bookable"><strong>6HEAD</strong>(08) 6163 8888 · Sun 12:00–9:30pm · book online<br><a href="https://6head.com.au/bookings/perth/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $350–700+ (steak + wine)</p>
-      <p class="kv"><span class="flag warn">Sunday</span> 5% Sunday surcharge on bill. Live music advertised for Sunday lunch window.</p>
-      <p class="kv"><b>Backup:</b> 6HEAD full → Madeleine or Frasers. Hot day → indoor atrium seating.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian japanese quiet food" data-id="3">
+  <div class="card-top"><span class="num">Option 03</span><span class="badge pick">Soft pick</span></div>
+  <h3>Hokkaido soup curry + Shafto Lane: small handmade room</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">japanese</span><span class="tag">quiet</span><span class="tag">food</span></div>
+  <p class="why">Rojiura Curry SAMURAI is built as a calm, handmade room for soup curry — the opposite of a spectacle dining room. Ideal if you want excellence without ‘anniversary performance’.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day + meal</p>
+    <p class="kv"><b>Day plan:</b> Late morning specialty coffee nearby → 12:00 or 17:30 SAMURAI (double for two) → short CBD laneway wander → early night.</p>
+    <div class="bookable"><strong>Rojiura Curry SAMURAI Perth</strong>Shop 4A Shafto Ln · Sun 11:30–2:30 (LO 2) & 5–8:30 (LO 8) · (08) 6185 1523 · closed Mon & PHs<br><a href="https://au.samurai-curry.com/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $80–160</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Open Sunday per first-party site. Small room — arrive early or call; weekends can queue even if the vibe stays low-key.</p>
+    <p class="kv"><b>Backup:</b> Queue too long → Jom Kopitiam (Malaysian comfort) or Argyle Japanese dinner.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="adventure outdoor freo" data-id="4">
-  <div class="card-top"><span class="num">Option 04</span><span class="badge pick">Soft pick</span></div>
-  <h3>Adventure: Rottnest day-trip + Fremantle dinner</h3>
-  <div class="tags"><span class="tag">adventure</span><span class="tag">outdoor</span><span class="tag">freo</span></div>
-  <p class="why">Classic WA couple adventure — bikes, bays, quokkas — then Freo markets/dinner. Realistic on this Sunday ferry window.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> Early SeaLink (Freo 7am preferred or Perth 8:30am) → bikes/bays → return ≤5:30pm Rotto dep → Markets (to 6pm) → Bread in Common or Bib & Tucker.</p>
-      <div class="bookable"><strong>SeaLink Rottnest</strong>Timetable 26 Sep–11 Oct 2026 · last Rotto ~5:30pm this period<br><a href="https://www.sealink.com.au/rottnest-island/ferry-information/ferry-timetable/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Bread in Common</strong>Sun 12–10pm · 0449 588 404<br><a href="https://breadincommon.com.au/bookings/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Bib & Tucker</strong>Wed–Sun 8am–10pm · (08) 9433 2147<br><a href="https://bibandtucker.net.au/reservations/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $300–600</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Confirm day-of sailings (weather cancels happen). Later 7pm Rotto returns start Oct 12+ Fri–Sun table — not for 4 Oct period.</p>
-      <p class="kv"><b>Backup:</b> Ferry cancelled → Freo Markets + Prison + Bib & Tucker (option 7) or flip to Path 1.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian malaysian coffee food quiet" data-id="4">
+  <div class="card-top"><span class="num">Option 04</span><span class="badge">Food day</span></div>
+  <h3>Malaysian kopi morning + kopitiam dinner (Jom)</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">malaysian</span><span class="tag">coffee</span><span class="tag">food</span><span class="tag">quiet</span></div>
+  <p class="why">Kaya toast, kopi, nasi lemak energy — familiar, excellent, low-pressure. Halal-certified Northbridge room that suits a couple who care about flavour over theatre.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Food day</p>
+    <p class="kv"><b>Day plan:</b> 08:00–09:00 Jom breakfast set (Sat–Sun from 8am) → cultural centre / bookshop time → 18:00 return for dinner kway teow / laksa.</p>
+    <div class="bookable"><strong>Jom Kopitiam</strong>310 William St, Northbridge · Sat–Sun 8am–2:30pm & 5–9pm · 0410 294 951 · Halal<br><a href="https://www.perthdine.com/108333620939935/Jom-Kopitiam-Perth" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $70–160</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Weekend hours include early breakfast — good for beating crowds. Phone hours from venue socials/directories; call to confirm table timing.</p>
+    <p class="kv"><b>Backup:</b> Busy → takeaway kaya toast + Kings Park picnic. Dinner alt: Chopsticks Viet.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="luxury spa valley food" data-id="5">
-  <div class="card-top"><span class="num">Option 05</span><span class="badge pick">Soft pick</span></div>
-  <h3>Chill-luxury: Spa + Sandalford Sunday lunch + CBD dinner</h3>
-  <div class="tags"><span class="tag">luxury</span><span class="tag">spa</span><span class="tag">valley</span><span class="tag">food</span></div>
-  <p class="why">Indulgent morning, vineyard lunch (Sandalford Sunday lunch-only), then steakhouse or French back in town.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> 09:00 Crown or COMO spa → drive/Uber to Sandalford lunch 11:30–3 → cellar door → 19:00 6HEAD or Madeleine.</p>
-      <div class="bookable"><strong>Crown Spa</strong>Sun–Thu 9–5 · Fri–Sun surcharge · (08) 9362 8533<br><a href="https://www.crownperth.com.au/hotels/crown-spa" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>COMO Shambhala</strong>Daily 10–6 · 10% Sun surcharge · +61 8 6168 7877<br><a href="https://statebuildings.com/venues/como-shambhala-the-treasury" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Sandalford Restaurant</strong>Sun lunch 11:30am–3pm · (08) 9374 9374<br><a href="https://sandalford.com/the-restaurant" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $600–1000+</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Sandalford = lunch only Sunday (no dinner). Wild Swan dinner Fri–Sat only.</p>
-      <p class="kv"><b>Backup:</b> Valley too far → spa + Petition long lunch + 6HEAD. Sandalford full → Wild Swan lunch Fri–Sun.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian vietnamese food quiet" data-id="5">
+  <div class="card-top"><span class="num">Option 05</span><span class="badge">Half day + dinner</span></div>
+  <h3>Vietnamese Northbridge: Chopsticks Viet + quiet walk</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">vietnamese</span><span class="tag">food</span><span class="tag">quiet</span></div>
+  <p class="why">Clear, careful Vietnamese cooking for a couple who want flavour density and a normal-volume room — not a date-night cliché venue.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day + dinner</p>
+    <p class="kv"><b>Day plan:</b> Afternoon AGWA or State Library browse → early dinner Chopsticks (from 11am continuous Fri–Sun) → home or soft gelato.</p>
+    <div class="bookable"><strong>Chopsticks Viet Northbridge</strong>168 Newcastle St · Ph 0428 079 966 · Fri–Sun 11:00–21:00 · Mon–Thu split service<br><a href="https://chopsticksviet.com.au/northbridge/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $90–180</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Open continuous 11–21 Sunday. Bookings not strongly emphasised — go early evening for quieter tables.</p>
+    <p class="kv"><b>Backup:</b> Full/noisy → SAMURAI or Silks. Rain stays indoor cultural centre.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="valley food luxury" data-id="6">
-  <div class="card-top"><span class="num">Option 06</span><span class="badge">Half day + evening free</span></div>
-  <h3>Swan Valley chocolate + Wild Swan fine lunch</h3>
-  <div class="tags"><span class="tag">valley</span><span class="tag">food</span><span class="tag">luxury</span></div>
-  <p class="why">Sweet factory stop then awarded Mandoon lunch overlooking the Llawn — food-first Valley without a full wine-tour grind.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day + evening free</p>
-      <p class="kv"><b>Day plan:</b> 10:00 Margaret River Chocolate Co Swan Valley (free entry/tastings) → 12:00 Wild Swan lunch → optional cellar → evening rest or light CBD dessert.</p>
-      <div class="bookable"><strong>MR Chocolate Co Swan Valley</strong>5123 West Swan Rd · Daily 9–5 · (08) 9250 1588 · no booking for tastings<br><a href="https://www.chocolatefactory.com.au/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Wild Swan @ Mandoon</strong>Lunch Fri–Sun 12–3 · (08) 6279 0500<br><a href="https://mandoonestate.com.au/eat-drink/wild-swan" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $250–550</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Perth City MRCC store CLOSED Sundays — use Swan Valley factory. Wild Swan: no Sunday dinner.</p>
-      <p class="kv"><b>Backup:</b> Wild Swan full → Sandalford lunch. Rain → chocolate factory indoor + café.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian korean food" data-id="6">
+  <div class="card-top"><span class="num">Option 06</span><span class="badge">Evening meal</span></div>
+  <h3>Korean BBQ for two — early sitting, quieter corner</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">korean</span><span class="tag">food</span></div>
+  <p class="why">Tabletop BBQ can still be intimate if you book early, ask for a less central table, and keep it as the whole plan — not a pub crawl after.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Evening meal</p>
+    <p class="kv"><b>Day plan:</b> Slow afternoon at home or park → 17:00 Arirang CBD (Sunday open through evening) → done by 20:00.</p>
+    <div class="bookable"><strong>Arirang Korean BBQ Perth CBD</strong>91–93 Barrack St · Sun 11:30–21:00 · (08) 9225 4855 · info@arirang.com.au<br><a href="https://www.arirang.com.au/" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Arirang Karrinyup (alt)</strong>Sun kitchen to ~8:40pm · (08) 6507 8529 · outdoor precinct — check wind<br><a href="https://www.arirang.com.au/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $120–280</p>
+    <p class="kv"><span class="flag warn">Sunday</span> CBD Sunday hours verified first-party. Can get lively later — early seating is the introvert move.</p>
+    <p class="kv"><b>Backup:</b> Prefer no grill smoke → Nobu / Argyle / Silks instead.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="freo cultural food adventure" data-id="7">
-  <div class="card-top"><span class="num">Option 07</span><span class="badge">Full day</span></div>
-  <h3>Fremantle Sunday: Markets + Prison + harbour dinner</h3>
-  <div class="tags"><span class="tag">freo</span><span class="tag">cultural</span><span class="tag">food</span><span class="tag">adventure</span></div>
-  <p class="why">Built for Sundays — Markets peak Fri–Sun; Prison tours daily; dinner on the coast.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> 09:00 Markets (Yard from 8) → Convict Prison tour → cappuccino strip → dinner Bib & Tucker or Bread in Common.</p>
-      <div class="bookable"><strong>Fremantle Markets</strong>Sun Yard 8–6 / Hall 9–6 · (08) 9335 2515<br><a href="https://fremantlemarkets.com.au/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Fremantle Prison</strong>Open Sun · Convict tour hourly ~10–5 · (08) 9336 9200<br><a href="https://fremantleprison.com.au/tours/convict-prison-tour/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Bib & Tucker</strong>(08) 9433 2147<br><a href="https://bibandtucker.net.au/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $220–500</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Markets closed Mon–Thu (except PH Mondays). Tunnels tour needs advance booking (online closes prior day).</p>
-      <p class="kv"><b>Backup:</b> Wet → Markets Hall (covered) + Prison + indoor Dining. Skip beach.</p>
-    </div>
-  </details>
+<article class="card" data-tags="asian japanese waterfront quiet food" data-id="7">
+  <div class="card-top"><span class="num">Option 07</span><span class="badge">Dinner + short walk</span></div>
+  <h3>Modern Japanese by the river: Argyle (small-scale quay)</h3>
+  <div class="tags"><span class="tag">asian</span><span class="tag">japanese</span><span class="tag">waterfront</span><span class="tag">quiet</span><span class="tag">food</span></div>
+  <p class="why">Sushi and izakaya plates with river light — quieter and more food-focused than treating a big steakhouse as ‘romance default’. Kitchen closes before the room; keep it dinner-primary.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Dinner + short walk</p>
+    <p class="kv"><b>Day plan:</b> Dusk walk Barrack Square (skip loud weekend pop-ups if any) → 17:30–18:00 Argyle · request two-top.</p>
+    <div class="bookable"><strong>Argyle Bar & Restaurant</strong>11 Barrack Square · Sun lunch 11–2 / dinner 5–9 · book online · kitchen closes early — call<br><a href="https://argylebarandrestaurant.com.au/" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Book</strong>Online bookings page<br><a href="https://argylebarandrestaurant.com.au/book-now/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $180–400</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Sun dinner to 9pm (Fri–Sat to 10). Call ahead for exact kitchen close.</p>
+    <p class="kv"><b>Backup:</b> Full → Nobu or SAMURAI. Windy quay → indoor table only.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic outdoor food waterfront" data-id="8">
-  <div class="card-top"><span class="num">Option 08</span><span class="badge">Full day</span></div>
-  <h3>Cottesloe beach day + Il Lido Italian dinner</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">outdoor</span><span class="tag">food</span><span class="tag">waterfront</span></div>
-  <p class="why">Sand + Indian Ocean + award-winning Italian wine list at the old Lido Cabaret on Marine Parade.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> Brunch espresso at Il Lido or beach café → swim/walk → golden hour Indiana/Tea House area → dinner Il Lido.</p>
-      <div class="bookable"><strong>Il Lido</strong>88 Marine Parade, Cottesloe · (08) 9286 1111 · bookings@illido.com.au · listed daily ~6:30–23:30<br><a href="https://www.illido.com.au/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $280–550</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Star Wine List hours show Sunday open. Bookings recommended weekends — walk-ins possible. Confirm day-of on phone.</p>
-      <p class="kv"><b>Backup:</b> Wind/rain → skip swim, Il Lido lunch + indoor wine. Dinner full → Cottesloe Beach Club walk-in after 3pm (verify).</p>
-    </div>
-  </details>
+<article class="card" data-tags="valley nature food quiet" data-id="8">
+  <div class="card-top"><span class="num">Option 08</span><span class="badge">Half day drive</span></div>
+  <h3>Swan Valley without the bus: Sandalford lunch for two</h3>
+  <div class="tags"><span class="tag">valley</span><span class="tag">nature</span><span class="tag">food</span><span class="tag">quiet</span></div>
+  <p class="why">Book your own table, drive yourselves, skip packaged ‘wine tour party’ coaches. One cellar door, one lunch, home before Sunday traffic mood.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day drive</p>
+    <p class="kv"><b>Day plan:</b> 10:30 arrive Sandalford cellar door (daily 10–5) → 11:45–14:30 restaurant Sunday lunch → optional chocolate factory stop on West Swan Rd → home.</p>
+    <div class="bookable"><strong>Sandalford Restaurant</strong>3210 West Swan Rd · Sun lunch 11:30am–3pm only · (08) 9374 9374<br><a href="https://sandalford.com/the-restaurant" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>MR Chocolate Co Swan Valley</strong>5123 West Swan Rd · Daily 9–5 · free tastings · (08) 9250 1588 · CBD store closed Sundays<br><a href="https://www.chocolatefactory.com.au/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $220–450</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Restaurant lunch-only Sunday (no dinner). Ask for a quieter table when booking. Designate a driver or Uber.</p>
+    <p class="kv"><b>Backup:</b> Sandalford full → Wild Swan lunch at Mandoon (Fri–Sun). Rain → chocolate factory + café indoors.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="adventure outdoor waterfront romantic" data-id="9">
-  <div class="card-top"><span class="num">Option 09</span><span class="badge">Half day + dinner</span></div>
-  <h3>Sunday sunset kayak + South Perth dinner</h3>
-  <div class="tags"><span class="tag">adventure</span><span class="tag">outdoor</span><span class="tag">waterfront</span><span class="tag">romantic</span></div>
-  <p class="why">Water Wanderers runs City Sunset kayak every Sunday — beginner-friendly double kayaks, city lights.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day + dinner</p>
-      <p class="kv"><b>Day plan:</b> Lazy morning → 17:00 kayak Coode St Jetty (~2 hrs, Oct window listed 5–7pm seasonal) → dinner South Perth / Uber to Madeleine or 6HEAD.</p>
-      <div class="bookable"><strong>Water Wanderers City Sunset</strong>$100/paddler · Every Sunday · 0412 101 949 · info@waterwanderers.com.au<br><a href="http://waterwanderers.com.au/guided-tours/perth-city-sunset.html" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $350–600 (kayak $200 couple + dinner)</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Tour is Sunday-specific. Time shifts by Noongar season — Oct listed ~5:00–7:00pm on operator page; reconfirm.</p>
-      <p class="kv"><b>Backup:</b> Wind cancel → Captain Cook dinner cruise or EQ walk + 6HEAD.</p>
-    </div>
-  </details>
+<article class="card" data-tags="valley food quiet luxury" data-id="9">
+  <div class="card-top"><span class="num">Option 09</span><span class="badge">Lunch focus</span></div>
+  <h3>Wild Swan lunch at Mandoon — fine, garden-facing, then leave</h3>
+  <div class="tags"><span class="tag">valley</span><span class="tag">food</span><span class="tag">quiet</span><span class="tag">luxury</span></div>
+  <p class="why">Contemporary Australian tasting-adjacent lunch overlooking gardens — celebrate with cooking, not with a noisy night market energy. No need to ‘do the whole Valley’.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Lunch focus</p>
+    <p class="kv"><b>Day plan:</b> Drive mid-morning → 12:00 Wild Swan → short estate stroll → back to city for tea at home.</p>
+    <div class="bookable"><strong>Wild Swan @ Mandoon</strong>10 Harris Rd, Caversham · Lunch Fri–Sun 12–3 · (08) 6279 0500 · hello@mandoonestate.com.au<br><a href="https://mandoonestate.com.au/eat-drink/wild-swan" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $250–500</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Lunch yes; dinner Fri–Sat only. The Llawn beer garden is a different, louder energy — skip if you want hush.</p>
+    <p class="kv"><b>Backup:</b> Full → Sandalford. Want Asian dinner later → Nobu evening.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic waterfront food" data-id="10">
-  <div class="card-top"><span class="num">Option 10</span><span class="badge">Evening focus</span></div>
-  <h3>Captain Cook Swan River dinner cruise</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">waterfront</span><span class="tag">food</span></div>
-  <p class="why">Buffet dinner on the water with city lights — low-planning anniversary evening.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Evening focus</p>
-      <p class="kv"><b>Day plan:</b> Day free (spa/park/Freo) → check-in Pier 3 Barrack St 30 min early → ~2.5 hr cruise.</p>
-      <div class="bookable"><strong>Captain Cook Dinner Cruise</strong>From ~$160 adult · (08) 9325 3341<br><a href="https://www.captaincookcruises.com.au/cruises/dinner-cruises/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $320–450 cruise-only; +day spend</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Operator open most days except Christmas Day — confirm Sun 4 Oct sailing in booking calendar (unverified day-specific).</p>
-      <p class="kv"><b>Backup:</b> Cancelled/weather → 6HEAD or Madeleine land dinner.</p>
-    </div>
-  </details>
+<article class="card" data-tags="spa coffee quiet indoor" data-id="10">
+  <div class="card-top"><span class="num">Option 10</span><span class="badge">Half day reset</span></div>
+  <h3>Calm spa morning (COMO) + Petition coffee/food, no flash</h3>
+  <div class="tags"><span class="tag">spa</span><span class="tag">coffee</span><span class="tag">quiet</span><span class="tag">indoor</span></div>
+  <p class="why">Spa as quiet body reset, not Instagram spa-day. Pair with State Buildings coffee and a simple plate — stay soft-spoken.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day reset</p>
+    <p class="kv"><b>Day plan:</b> 10:00 COMO Shambhala treatment (book dual or sequential) → Petition brunch/lunch in a corner → afternoon rest before an Asian dinner from another card.</p>
+    <div class="bookable"><strong>COMO Shambhala The Treasury</strong>Daily 10am–6pm · 10% Sunday treatment surcharge · +61 8 6168 7877<br><a href="https://statebuildings.com/venues/como-shambhala-the-treasury" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Petition</strong>Sat–Sun 8am–9pm · State Buildings · +61 8 6168 7888<br><a href="https://statebuildings.com/venues/petition" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $350–700</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Long Chim (Thai) in the same precinct is CLOSED Sunday — do not plan it. COMO Sunday surcharge 10%.</p>
+    <p class="kv"><b>Backup:</b> Spa full → Crown Spa (Sun 9–5, Fri–Sun surcharge) then Silks next door.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="cultural indoor food" data-id="11">
-  <div class="card-top"><span class="num">Option 11</span><span class="badge">Full day indoor</span></div>
-  <h3>Rain-ready cultural: Boola Bardip + Art Gallery + Petition</h3>
-  <div class="tags"><span class="tag">cultural</span><span class="tag">indoor</span><span class="tag">food</span></div>
-  <p class="why">Best wet-weather anniversary — museum + gallery in Cultural Centre, then State Buildings dining.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day indoor</p>
-      <p class="kv"><b>Day plan:</b> 10:00 WA Museum (optional Remarkable Reptiles Sun 10am — book) → AGWA → Petition dinner or long lunch.</p>
-      <div class="bookable"><strong>WA Museum Boola Bardip</strong>Sun ~9:30–5 · Remarkable Reptiles Sun 4 Oct 10:00 listed<br><a href="https://visit.museum.wa.gov.au/boolabardip" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Art Gallery of WA</strong>Sun 10–5<br><a href="https://artgallery.wa.gov.au/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Petition</strong>Sat–Sun 8am–9pm<br><a href="https://statebuildings.com/venues/petition" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $150–400</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Long Chim CLOSED Sun–Mon — use Petition not Long Chim. His Majesty’s has no show confirmed for Sun 4 Oct (next Maj murder dinner 9–10 Oct).</p>
-      <p class="kv"><b>Backup:</b> Crowds → Perth Mint Gold Tour (Sun slots) + Petition.</p>
-    </div>
-  </details>
+<article class="card" data-tags="freo coffee food quiet books" data-id="11">
+  <div class="card-top"><span class="num">Option 11</span><span class="badge">Half day Freo</span></div>
+  <h3>Fremantle West End early: bookshop + Bread in Common</h3>
+  <div class="tags"><span class="tag">freo</span><span class="tag">coffee</span><span class="tag">food</span><span class="tag">quiet</span><span class="tag">books</span></div>
+  <p class="why">Fremantle can be gentle if you stay in the West End, prioritise New Edition’s long quiet shelves, and eat before the Sunday Markets crush peaks.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day Freo</p>
+    <p class="kv"><b>Day plan:</b> 09:30 New Edition Bookshop → coffee nearby → 12:00 Bread in Common shared plates (book) → leave before late-afternoon party strip energy · optional quick Markets Hall only if you want one gift.</p>
+    <div class="bookable"><strong>New Edition Bookshop</strong>41 High St (cnr Henry) · 9am–9pm daily · (08) 9335 2383<br><a href="https://www.newedition.com.au/" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Bread in Common</strong>43 Pakenham St · Sun–Thu 12–10pm · 0449 588 404<br><a href="https://breadincommon.com.au/bookings/" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Fremantle Markets (optional)</strong>Sun Yard 8–6 / Hall 9–6 — go early or skip<br><a href="https://fremantlemarkets.com.au/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $150–320</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Markets are Sunday-busy by design — optional, not required. Bread in Common first-party Sun open from 12.</p>
+    <p class="kv"><b>Backup:</b> Too busy → skip Markets entirely; bookshop + lunch only. Dinner Asian back in CBD (Nobu/Argyle).</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic food outdoor waterfront" data-id="12">
-  <div class="card-top"><span class="num">Option 12</span><span class="badge">Half day food</span></div>
-  <h3>Heathcote reserve + Tucci Sunday roast lunch</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">food</span><span class="tag">outdoor</span><span class="tag">waterfront</span></div>
-  <p class="why">Leafy Goolugatup Heathcote, river views, Mediterranean feast — Sunday roast chicken special advertised.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day food</p>
-      <p class="kv"><b>Day plan:</b> Walk Heathcote grounds → Tucci lunch (Sun to 5pm) → gelato kiosk → evening free or CBD dessert.</p>
-      <div class="bookable"><strong>Tucci</strong>58 Duncraig Rd, Applecross · Sun 11am–5pm · (08) 9315 7700 · hello@tucci.com.au<br><a href="https://www.tucci.com.au/make-a-booking/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $180–350</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Restaurant Sunday closes 5pm — this is lunch/afternoon, not late dinner. Book roast ahead.</p>
-      <p class="kv"><b>Backup:</b> Full → Il Lido Cottesloe or Petition. Rain → still Tucci indoor.</p>
-    </div>
-  </details>
+<article class="card" data-tags="nature adventure quiet" data-id="12">
+  <div class="card-top"><span class="num">Option 12</span><span class="badge">Full day optional</span></div>
+  <h3>Rottnest, demoted & calm-framed (early bikes, quiet bays)</h3>
+  <div class="tags"><span class="tag">nature</span><span class="tag">adventure</span><span class="tag">quiet</span></div>
+  <p class="why">Only if you both truly want island air. Frame it as early ferry, bikes, empty-ish bays, packed snacks — not a party ferry story. Sundays can still be busy; leave early or skip this card.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Full day optional</p>
+    <p class="kv"><b>Day plan:</b> First Freo sailing (~7am SeaLink window 26 Sep–11 Oct) → bikes → south/lesser bays → lunch simple → return mid-afternoon (do not cut it fine on last ~5:30pm Rotto dep this period) → quiet Freo dinner or home.</p>
+    <div class="bookable"><strong>SeaLink timetable</strong>26 Sep–11 Oct 2026 period · Perth 8:30am / Freo from 7am · last Rotto ~5:30pm this window<br><a href="https://www.sealink.com.au/rottnest-island/ferry-information/ferry-timetable/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $250–500</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Spring Sundays can be crowded on boats and at Thomson Bay. Weather cancellations happen. Prefer Options 1–3 if crowds drain you.</p>
+    <p class="kv"><b>Backup:</b> Cancel freely → City Beach walk (#13) or Kings Park picnic (#14).</p>
+  </div></details>
 </article>
-<article class="card" data-tags="adventure outdoor food waterfront" data-id="13">
-  <div class="card-top"><span class="num">Option 13</span><span class="badge">Full day</span></div>
-  <h3>AQWA Hillarys + harbour lunch + northern beaches sunset</h3>
-  <div class="tags"><span class="tag">adventure</span><span class="tag">outdoor</span><span class="tag">food</span><span class="tag">waterfront</span></div>
-  <p class="why">Underwater WA coast indoors then Hillarys Boardwalk — different geography from Freo/CBD paths.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> 09:30 AQWA → lunch at harbour → Whitfords/Marmion lookout or Scarborough sunset → casual dinner Hillarys/Scarborough.</p>
-      <div class="bookable"><strong>AQWA</strong>91 Southside Dr, Hillarys · Mar–Nov 9am–4pm daily · (08) 9447 7500<br><a href="https://www.aqwa.com.au/visit/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $200–450</p>
-      <p class="kv"><span class="flag warn">Sunday</span> AQWA open Sundays. Dinner venues at harbour — verify chosen restaurant Sunday hours day-of (many open; mark unverified until booked).</p>
-      <p class="kv"><b>Backup:</b> Rough weather still fine inside AQWA. Skip sunset → earlier CBD dinner.</p>
-    </div>
-  </details>
+<article class="card" data-tags="nature coffee quiet coast" data-id="13">
+  <div class="card-top"><span class="num">Option 13</span><span class="badge">Morning nature</span></div>
+  <h3>City Beach / Floreat pines: coffee, sand, few words</h3>
+  <div class="tags"><span class="tag">nature</span><span class="tag">coffee</span><span class="tag">quiet</span><span class="tag">coast</span></div>
+  <p class="why">Coastal without Cottesloe’s Sunday peacocking. Pastry + long beach walk + drive home for a nap before Asian dinner.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Morning nature</p>
+    <p class="kv"><b>Day plan:</b> 07:30 Mary Street Bakery City Beach (listed 7am–3pm, 7 days) or Floreat beach kiosk → walk north/south away from carpark clusters → shower · later dinner from Asian cards.</p>
+    <div class="bookable"><strong>Mary Street Bakery City Beach</strong>31–33 Gayton Rd · 7am–3pm, 7 days · 0499 863 383<br><a href="https://www.marystreetbakery.com.au/stores" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>John Street Cafe (alt Cottesloe pines)</strong>Daily 7–3 · quieter pocket off Marine Parade<br><a href="https://www.johnstreetcafe.com.au/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $40–120 (+ dinner separate)</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Arrive at open to avoid cafe queues. No bookings needed for walks.</p>
+    <p class="kv"><b>Backup:</b> Wind → coffee only + Kings Park inland paths.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="outdoor adventure food" data-id="14">
-  <div class="card-top"><span class="num">Option 14</span><span class="badge">Full day</span></div>
-  <h3>Perth Zoo + South Perth foreshore + dinner</h3>
-  <div class="tags"><span class="tag">outdoor</span><span class="tag">adventure</span><span class="tag">food</span></div>
-  <p class="why">Ferry across the Swan, full zoo day, esplanade golden hour — playful couple energy.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> EQ ferry to Mends St → Zoo 9–afternoon → Coode/Mends foreshore → dinner South Perth or kayak add-on (opt 9) or Uber to 6HEAD.</p>
-      <div class="bookable"><strong>Perth Zoo</strong>Open every day 9am–5pm · 20 Labouchere Rd<br><a href="https://perthzoo.wa.gov.au/visitor-information/getting-here-and-opening-hours" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $180–450</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Zoo open Sundays year-round. Ferry EQ–South Perth frequent Sep–Jun.</p>
-      <p class="kv"><b>Backup:</b> Heat → shorter zoo + indoor café. Rain → Zoo still mostly outdoor; pivot to option 11.</p>
-    </div>
-  </details>
+<article class="card" data-tags="nature picnic asian quiet" data-id="14">
+  <div class="card-top"><span class="num">Option 14</span><span class="badge">Nature + dinner</span></div>
+  <h3>Private Kings Park picnic + one excellent Asian dinner</h3>
+  <div class="tags"><span class="tag">nature</span><span class="tag">picnic</span><span class="tag">asian</span><span class="tag">quiet</span></div>
+  <p class="why">Your own food, your own pace, no tour. Pair with Nobu / Silks / Argyle / SAMURAI — the anniversary ‘event’ is the meal quality, not props.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Nature + dinner</p>
+    <p class="kv"><b>Day plan:</b> Late morning picnic supplies (Asian bakery/snacks + fruit) → Synergy Parkland or quieter lawns away from Fraser Ave peak → home reset → dinner booking.</p>
+    <div class="bookable"><strong>Dinner — pick one</strong>Nobu / Silks / Argyle / SAMURAI — see those cards<br><a href="https://www.crownperth.com.au/restaurants/nobu" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Perth Mint Shop (optional gift)</strong>Sun 9–5 · jewellery/keepsake · bullion desk closed Sun<br><a href="https://www.perthmint.com/visit/visitor-information/" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $80–200 picnic + $150–600 dinner</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Confirm current BGPA/Kings Park BYO alcohol rules day-of. Flowers: order Saturday — most florists no Sunday delivery.</p>
+    <p class="kv"><b>Backup:</b> Rain picnic → museum cafés + same dinner booking.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="luxury spa food" data-id="15">
-  <div class="card-top"><span class="num">Option 15</span><span class="badge">Half day + dinner</span></div>
-  <h3>Crown Spa double treatment + Crown dining night</h3>
-  <div class="tags"><span class="tag">luxury</span><span class="tag">spa</span><span class="tag">food</span></div>
-  <p class="why">Zero-travel luxury — Aqua Retreat, treatments, then stay on-site for dinner/shows.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day + dinner</p>
-      <p class="kv"><b>Day plan:</b> Arrive 60 min pre-treatment for Aqua Retreat → dual massages → dinner at a Crown restaurant (book separately).</p>
-      <div class="bookable"><strong>Crown Spa</strong>(08) 9362 8533 · Sun 9–5 · Fri–Sun surcharge<br><a href="https://www.crownperth.com.au/hotels/crown-spa" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $500–900+</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Spa Sun–Thu closes 5pm (earlier than Fri–Sat). Confirm chosen Crown restaurant Sunday hours when booking.</p>
-      <p class="kv"><b>Backup:</b> Spa full → COMO Shambhala CBD. Dining fail → 6HEAD nearby at EQ.</p>
-    </div>
-  </details>
+<article class="card" data-tags="indoor cultural quiet coffee" data-id="15">
+  <div class="card-top"><span class="num">Option 15</span><span class="badge">Rain / low-energy day</span></div>
+  <h3>Indoor calm: AGWA + Boola Bardip + tea/coffee</h3>
+  <div class="tags"><span class="tag">indoor</span><span class="tag">cultural</span><span class="tag">quiet</span><span class="tag">coffee</span></div>
+  <p class="why">Galleries beat loud brunch queues when you want silence and shared looking. End with Asian dinner; don’t force a packed schedule.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Rain / low-energy day</p>
+    <p class="kv"><b>Day plan:</b> 10:00 Art Gallery of WA → lunch light nearby or museum cafe → Boola Bardip afternoon (optional Sun 10am Remarkable Reptiles if you like animals — book) → dinner Silks/Nobu/Chopsticks.</p>
+    <div class="bookable"><strong>Art Gallery of WA</strong>Sun 10am–5pm · Roe St Cultural Centre<br><a href="https://artgallery.wa.gov.au/" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>WA Museum Boola Bardip</strong>Sun ~9:30–5 · Remarkable Reptiles Sun 4 Oct 10:00 listed<br><a href="https://visit.museum.wa.gov.au/boolabardip" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $80–250 (+ dinner)</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Both open Sunday. His Majesty’s has no show confirmed for 4 Oct — don’t rely on theatre.</p>
+    <p class="kv"><b>Backup:</b> Crowd spike → Perth Mint Gold Tour (timed, calmer) + coffee.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="luxury valley food" data-id="16">
-  <div class="card-top"><span class="num">Option 16</span><span class="badge">Full day</span></div>
-  <h3>Private Swan Valley driver tour + winery lunch</h3>
-  <div class="tags"><span class="tag">luxury</span><span class="tag">valley</span><span class="tag">food</span></div>
-  <p class="why">No designated-driver stress — private car touring cellar doors with lunch built in.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day</p>
-      <p class="kv"><b>Day plan:</b> Hotel pickup mid-morning → 3–4 stops + Sandalford or Wild Swan lunch → return for CBD nightcap.</p>
-      <div class="bookable"><strong>Sandalford lunch</strong>(08) 9374 9374<br><a href="https://sandalford.com/the-restaurant" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Private tour operators</strong>Multiple list Sunday tours from ~$445/group — confirm Oct 4<br><a href="https://perthprivatetours.com.au/swan-valley-private-tour" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $500–900+</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Operator availability & exact price unverified until quoted. Wineries: many cellar doors daily; restaurant lunch slots limited.</p>
-      <p class="kv"><b>Backup:</b> No private car → self-drive with one sober driver or Uber between two venues only.</p>
-    </div>
-  </details>
+<article class="card" data-tags="indoor quiet asian cultural" data-id="16">
+  <div class="card-top"><span class="num">Option 16</span><span class="badge">Evening + optional</span></div>
+  <h3>Arthouse film at Luna + soft Asian supper</h3>
+  <div class="tags"><span class="tag">indoor</span><span class="tag">quiet</span><span class="tag">asian</span><span class="tag">cultural</span></div>
+  <p class="why">Sitting side-by-side in the dark is introvert-perfect. Luna Leederville / SX are arthouse, not stadium spectacle. Eat after, not in a noisy pre-drink bar.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Evening + optional</p>
+    <p class="kv"><b>Day plan:</b> Check Sun 4 Oct session times → matinee or early evening → Chopsticks / Jom / SAMURAI after.</p>
+    <div class="bookable"><strong>Luna Palace session times</strong>Leederville (08) 9444 4056 · SX Freo (08) 9430 5999 · Windsor (08) 9386 3554<br><a href="https://lunapalace.com.au/session-times" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $60–120 cinema + $80–250 food</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Films change weekly — verify 4 Oct titles/times on the day you book. Unverified until you open the session board.</p>
+    <p class="kv"><b>Backup:</b> Nothing appealing on → Option 15 galleries + dinner.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="adventure cultural outdoor" data-id="17">
-  <div class="card-top"><span class="num">Option 17</span><span class="badge">Half day</span></div>
-  <h3>Optus Stadium tour + Burswood river loop</h3>
-  <div class="tags"><span class="tag">adventure</span><span class="tag">cultural</span><span class="tag">outdoor</span></div>
-  <p class="why">Behind-the-scenes stadium experience then riverside walk — different from food/spa paths.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Half day</p>
-      <p class="kv"><b>Day plan:</b> Morning stadium tour (typical public slots ~10/11/12 — not on event days) → Matagarup Bridge photos → light lunch Burswood → evening separate dinner booking.</p>
-      <div class="bookable"><strong>Optus Stadium Tours</strong>Book via official/Experience Oz channels · confirm Sun 4 Oct<br><a href="https://www.experienceoz.com.au/en/perth/optus-stadium-tours" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $120–280 (+ dinner extra)</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Tours may not run on event/PH days — verify calendar. Unverified whether 4 Oct has a clash.</p>
-      <p class="kv"><b>Backup:</b> Tour cancelled → AQWA or Zoo. Pair evening with Madeleine/6HEAD.</p>
-    </div>
-  </details>
+<article class="card" data-tags="spa asian japanese chinese quiet luxury" data-id="17">
+  <div class="card-top"><span class="num">Option 17</span><span class="badge">Half day + dinner</span></div>
+  <h3>Crown low-travel: spa + Silks or Nobu same precinct</h3>
+  <div class="tags"><span class="tag">spa</span><span class="tag">asian</span><span class="tag">japanese</span><span class="tag">chinese</span><span class="tag">quiet</span><span class="tag">luxury</span></div>
+  <p class="why">Minimise decisions and Uber hops. Calm treatments, then Cantonese or Japanese in the same complex — useful if social battery is limited.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Half day + dinner</p>
+    <p class="kv"><b>Day plan:</b> Crown Spa (arrive 60 min early for Aqua Retreat if treatment ≥1 hr) → rest → Silks or Nobu dinner.</p>
+    <div class="bookable"><strong>Crown Spa</strong>Sun–Thu 9am–5pm · Fri–Sun surcharge · (08) 9362 8533<br><a href="https://www.crownperth.com.au/hotels/crown-spa" target="_blank" rel="noopener">Open link</a></div><div class="bookable"><strong>Nobu / Silks</strong>See Options 1–2 for hours & phones<br><a href="https://www.crownperth.com.au/restaurants/nobu" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $500–950</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Spa closes 5pm Sun–Thu. Restaurant Sunday surcharges 15%. Casino floors are loud — walk purposefully to spa/restaurant; don’t linger.</p>
+    <p class="kv"><b>Backup:</b> Spa full → COMO then CBD Asian dinner.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="food romantic" data-id="18">
-  <div class="card-top"><span class="num">Option 18</span><span class="badge">Evening + optional day</span></div>
-  <h3>Northbridge night: Lucky Chan’s + Beaufort crawl</h3>
-  <div class="tags"><span class="tag">food</span><span class="tag">romantic</span></div>
-  <p class="why">Fun, energetic Asian dining (Sun 5–10pm) then stroll toward Highgate bars — younger vibe than steak/French.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Evening + optional day</p>
-      <p class="kv"><b>Day plan:</b> Day: Mint gift / park → 18:00 Lucky Chan’s → optional nightcap toward Madeleine neighbourhood (without double-dining).</p>
-      <div class="bookable"><strong>Lucky Chan’s</strong>311 William St · Sun 5–10pm · theboss@luckychans.com.au<br><a href="http://www.luckychans.com.au/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $150–320</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Closed Mondays. Busy weekend evenings — book or arrive early. Phone listed in directories as +61 402 770 146 — confirm on site.</p>
-      <p class="kv"><b>Backup:</b> Full → Meninas Grill Highgate (Sun kitchen 5–8pm) or Madeleine.</p>
-    </div>
-  </details>
+<article class="card" data-tags="food quiet romantic" data-id="18">
+  <div class="card-top"><span class="num">Option 18</span><span class="badge">Dinner focus</span></div>
+  <h3>Quiet French alternative: Madeleine (if you want non-Asian night)</h3>
+  <div class="tags"><span class="tag">food</span><span class="tag">quiet</span><span class="tag">romantic</span></div>
+  <p class="why">Still on the slate as a calm Highgate room with serious cooking — not roses-and-violin kitsch. Use when you want a break from Asian menus, not as the default ‘romance’ trope.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Dinner focus</p>
+    <p class="kv"><b>Day plan:</b> Day: coffee + park from other cards → 18:30 Madeleine (Sun from 3pm).</p>
+    <div class="bookable"><strong>Madeleine</strong>487 Beaufort St, Highgate · Sat–Sun 3pm–late · bookings online · bookings@madeleine487.com.au<br><a href="https://www.madeleineonbeaufort.com.au/bookings" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $250–450</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Open Sunday from 3pm. 2-hour sittings. Degustation ~$135 pp (pricing on site).</p>
+    <p class="kv"><b>Backup:</b> Full → Nobu or Argyle.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="food romantic" data-id="19">
-  <div class="card-top"><span class="num">Option 19</span><span class="badge">Evening focus</span></div>
-  <h3>Highgate Spanish: Meninas Grill + Beaufort stroll</h3>
-  <div class="tags"><span class="tag">food</span><span class="tag">romantic</span></div>
-  <p class="why">Newer Spanish steakhouse on Beaufort — special-occasion energy without CBD formality; near Madeleine as neighbour option.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Evening focus</p>
-      <p class="kv"><b>Day plan:</b> Afternoon Highgate vintage/shops → 17:30 Meninas (Sun kitchen to 8pm — early seating) → gelato walk.</p>
-      <div class="bookable"><strong>Meninas Grill</strong>519 Beaufort St, Highgate · Sun 5–8pm kitchen · (08) 9339 3668 · hola@meninasgrill.com.au<br><a href="https://meninasgrill.com.au/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> $200–400</p>
-      <p class="kv"><span class="flag warn">Sunday</span> Sunday kitchen closes 8pm — book early sitting. Not a late-night option.</p>
-      <p class="kv"><b>Backup:</b> Late preference → Madeleine (open late) or Lucky Chan’s to 10pm.</p>
-    </div>
-  </details>
+<article class="card" data-tags="coffee food quiet indoor" data-id="19">
+  <div class="card-top"><span class="num">Option 19</span><span class="badge">Brunch / easy day</span></div>
+  <h3>Petition corner table + State Buildings browse (no Long Chim)</h3>
+  <div class="tags"><span class="tag">coffee</span><span class="tag">food</span><span class="tag">quiet</span><span class="tag">indoor</span></div>
+  <p class="why">Good coffee and produce-led plates in a heritage room — stay for one meal, then leave. Explicitly avoid planning Long Chim (closed Sunday).</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Brunch / easy day</p>
+    <p class="kv"><b>Day plan:</b> 08:30 Petition → Cathedral Square sit → optional AGWA → Asian dinner elsewhere.</p>
+    <div class="bookable"><strong>Petition</strong>Cnr St Georges Tce & Barrack · Sat–Sun 8am–9pm<br><a href="https://statebuildings.com/venues/petition" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $80–200 brunch</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Long Chim CLOSED Sun–Mon. Wildflower CLOSED Sunday. Petition open.</p>
+    <p class="kv"><b>Backup:</b> Busy → Mary Street Bakery Highgate (earlier) or John Street Cafe.</p>
+  </div></details>
 </article>
-<article class="card" data-tags="romantic outdoor budget" data-id="20">
-  <div class="card-top"><span class="num">Option 20</span><span class="badge">Full day budget</span></div>
-  <h3>DIY Kings Park picnic + Mint keepsake + casual sunset</h3>
-  <div class="tags"><span class="tag">romantic</span><span class="tag">outdoor</span><span class="tag">budget</span></div>
-  <p class="why">Lowest-stress, under-$300 possible path — gift + picnic + free views; dinner optional upgrade.</p>
-  <details class="details">
-    <summary>Plan, bookables, budget &amp; Sunday notes</summary>
-    <div class="body">
-      <p class="kv"><b>Shape:</b> Full day budget</p>
-      <p class="kv"><b>Day plan:</b> Perth Mint Shop morning → gourmet picnic supplies CBD → Kings Park blanket sunset → optional Petition/6HEAD if upgrading.</p>
-      <div class="bookable"><strong>Perth Mint Shop</strong>Sun 9–5 · free entry to shop<br><a href="https://www.perthmint.com/visit/the-perth-mint-shop/" target="_blank" rel="noopener">Open link</a></div>
-<div class="bookable"><strong>Order flowers Saturday</strong>Most florists no Sunday delivery<br><a href="https://perthpetals.com.au/" target="_blank" rel="noopener">Open link</a></div>
-      <p class="kv"><b>Rough AUD (couple):</b> Under $300 (or $300–500 with dinner upgrade)</p>
-      <p class="kv"><span class="flag warn">Sunday</span> BYO alcohol rules in Kings Park — check current City/BGPA rules day-of. Florists: order Sat.</p>
-      <p class="kv"><b>Backup:</b> Rain → Boola Bardip picnic indoor café style + Mint.</p>
-    </div>
-  </details>
+<article class="card" data-tags="coffee quiet asian budget" data-id="20">
+  <div class="card-top"><span class="num">Option 20</span><span class="badge">Ultra-low pressure</span></div>
+  <h3>Do almost nothing: specialty coffee + one booking only</h3>
+  <div class="tags"><span class="tag">coffee</span><span class="tag">quiet</span><span class="tag">asian</span><span class="tag">budget</span></div>
+  <p class="why">Permission to protect the day. One excellent meal is enough for an anniversary when you’re introverted and food-led.</p>
+  <details class="details"><summary>Plan, bookables, budget &amp; Sunday notes</summary>
+  <div class="body">
+    <p class="kv"><b>Shape:</b> Ultra-low pressure</p>
+    <p class="kv"><b>Day plan:</b> Sleep in → favourite coffee (Mary Street / John Street / Petition) → rest → single dinner: Nobu or Silks or SAMURAI or Chopsticks — pick one, ignore the rest of this page.</p>
+    <div class="bookable"><strong>Pick ONE dinner</strong>Nobu +61 8 9362 7551 · Silks 1800 556 688 · SAMURAI (08) 6185 1523 · Chopsticks 0428 079 966<br><a href="https://www.crownperth.com.au/restaurants/nobu" target="_blank" rel="noopener">Open link</a></div>
+    <p class="kv"><b>Rough AUD (couple):</b> $120–600 depending on dinner tier</p>
+    <p class="kv"><span class="flag warn">Sunday</span> Book the dinner tonight; leave the daytime unscheduled on purpose.</p>
+    <p class="kv"><b>Backup:</b> Dinner cancelled → quality takeaway Asian + nice plates at home.</p>
+  </div></details>
 </article>
 </div>
 
 <section class="section" id="book-now">
-  <h2>Must-book urgency</h2>
+  <h2>Must-book tonight / tomorrow</h2>
   <div class="callout">
     <ul class="clean">
-      <li><strong>Tonight:</strong> Dinner for your shortlist — Madeleine, Frasers (08) 9482 0100, 6HEAD online, Il Lido (08) 9286 1111, Bib &amp; Tucker, Bread in Common, Meninas, Lucky Chan’s, Tucci.</li>
-      <li><strong>Tonight/tomorrow:</strong> SeaLink return seats if Rottnest (#4). Water Wanderers Sunday kayak (#9). Captain Cook cruise calendar (#10).</li>
-      <li><strong>Tomorrow:</strong> Spa slots Crown / COMO (#5, #15). Sandalford / Wild Swan lunch (#5, #6).</li>
-      <li><strong>Saturday:</strong> Flowers — most Perth florists do <em>not</em> deliver Sunday.</li>
+      <li><strong>Tonight:</strong> Nobu (+61 8 9362 7551) or Silks (1800 556 688) — Sunday surcharges + limited quiet tables.</li>
+      <li><strong>Tonight:</strong> Argyle online · SAMURAI (08) 6185 1523 · Madeleine if using #18 · Bread in Common if Freo.</li>
+      <li><strong>Tomorrow:</strong> Spa (COMO / Crown) if using #10 or #17 · Sandalford / Wild Swan lunch if Valley.</li>
+      <li><strong>Saturday:</strong> Flowers only if you want them — most florists do not deliver Sunday. A book from New Edition or Mint keepsake may fit better than a rushed bouquet.</li>
+      <li><strong>Optional:</strong> Luna session times for #16 · SeaLink only if you truly want #12.</li>
     </ul>
   </div>
 </section>
 
 <section class="section">
-  <h2>Sunday closed / surcharge cheat-sheet</h2>
+  <h2>Sunday closures &amp; surcharges (relevant ones)</h2>
   <div class="card-block">
     <ul class="clean">
-      <li><span class="flag bad">Closed Sun</span> Wildflower · Print Hall · Lalla Rookh · Long Chim · MR Chocolate Perth City store</li>
-      <li><span class="flag warn">Lunch only Sun</span> Sandalford restaurant · Wild Swan (dinner Fri–Sat only) · Tucci closes 5pm</li>
-      <li><span class="flag warn">Surcharges</span> 6HEAD 5% Sun · COMO Shambhala 10% Sun treatments · Crown Spa Fri–Sun surcharge</li>
-      <li><span class="flag ok">Sunday heroes</span> Frasers · 6HEAD · Madeleine · Petition · Markets · SeaLink · Zoo · AQWA · Mint Shop · Il Lido · Water Wanderers kayak</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Gifts · Sunday pickup</h2>
-  <div class="card-block">
-    <ul class="clean">
-      <li><strong>Perth Mint Shop</strong> Sun 9–5 (bullion trading closed Sun) — jewellery/keepsakes</li>
-      <li><strong>Fremantle Markets</strong> Sun to 6pm — handmade</li>
-      <li><strong>MR Chocolate Swan Valley</strong> Daily 9–5 — not the Murray St city store (closed Sun)</li>
-      <li><strong>Florists:</strong> order Saturday — Sunday delivery widely unavailable</li>
+      <li><span class="flag bad">Closed Sunday</span> Long Chim · Wildflower · Print Hall · Lalla Rookh · MR Chocolate Perth City store · Tansawa (directories list Sun closed — verify if considering)</li>
+      <li><span class="flag warn">15% Sunday surcharge</span> Nobu · Silks (Crown weekend terms)</li>
+      <li><span class="flag warn">10% Sunday</span> COMO Shambhala treatments · Crown Spa Fri–Sun surcharge (rate % not always published)</li>
+      <li><span class="flag ok">Strong Sunday fits</span> Nobu · Silks (+ afternoon tea) · SAMURAI · Chopsticks Viet · Jom · Arirang · Argyle · Petition · Mary Street Bakery · John Street Cafe · New Edition · AGWA · Boola Bardip · Sandalford lunch · Wild Swan lunch</li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p><strong>Research:</strong> First-party hours verified where linked (Frasers, 6HEAD, Madeleine, Petition, Bib &amp; Tucker, Bread in Common, SeaLink timetable, Sandalford, Wild Swan, Crown Spa, COMO, Markets, Mint, Zoo, AQWA, Tucci, Water Wanderers, MR Chocolate FAQ, Fremantle Prison, Il Lido via site + Star Wine List hours). Count shipped: 20.</p>
-  <p><strong>Could not fully verify:</strong> Exact SeaLink fare quote 4 Oct; Captain Cook sailing that exact Sunday; Optus tour calendar clash; harbour dinner venue hours at Hillarys; private tour quotes; Kings Park BYO alcohol current rule; Il Lido first-party hours page incomplete (cross-checked Star Wine List daily open).</p>
-  <p>Repo <code>perth-anniversary-4-oct-2026</code> · local <code>/workspace/perth-anniversary-plan/index.html</code></p>
+  <p><strong>Research:</strong> Hours from first-party pages where fetched (Nobu, Silks, SAMURAI, Argyle, Arirang, Chopsticks Viet, Sandalford, Wild Swan, COMO, Petition, Bread in Common, New Edition, John Street Cafe, SeaLink timetable, Crown Spa, Museum/AGWA listings). Mary Street Bakery hours from location listings (Offshoot coffee); reconfirm on their site if pages move.</p>
+  <p><strong>Unverified / mark carefully:</strong> Exact Nobu/Silks menu prices day-of; Luna film titles for 4 Oct; SeaLink seat availability; Jom phone hours vs door (call); Kings Park BYO alcohol rule; whether Argyle kitchen closes before 9pm sharp.</p>
+  <p>Tone note: recommendations are about taste and volume of space — not stereotypes. 20 options · <code>/workspace/perth-anniversary-plan/index.html</code></p>
 </footer>
 </div>
 <script>
@@ -503,8 +446,10 @@ footer{margin-top:2.5rem;padding-top:1.1rem;border-top:1px solid var(--border);f
   function apply(f){
     var n=0;
     cards.forEach(function(c){
-      var tags=c.getAttribute('data-tags')||'';
-      var show=f==='all'||tags.split(/\s+/).indexOf(f)>=0;
+      var tags=(c.getAttribute('data-tags')||'').split(/\s+/);
+      var show=f==='all'||tags.indexOf(f)>=0;
+      // books filter maps to books tag - Option 11 has books via freo; add alias
+      if(f==='books') show = tags.indexOf('books')>=0 || tags.indexOf('cultural')>=0 || (c.getAttribute('data-id')==='16');
       c.classList.toggle('hidden',!show);
       if(show)n++;
     });
