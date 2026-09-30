@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Perth 1-Year Anniversary — Sunday 4 October 2026</title>
+<meta name="description" content="Three full-day itineraries for Biggles &amp; girlfriend — Romantic, Adventure (Rottnest), Chill-Luxury — Sunday 4 October 2026 AWST." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --canvas: #f7f6f3;
+    --surface: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #5c5c5c;
+    --accent: #c45c26;
+    --accent-soft: rgba(196, 92, 38, 0.12);
+    --border: #e4e1da;
+    --ok: #2f6b4f;
+    --warn: #9a6b16;
+    --closed: #8b3a3a;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(26,26,26,0.04), 0 8px 24px rgba(26,26,26,0.06);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+  }
+  h1 { font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.45rem, 2.5vw, 1.85rem); }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0 0 1em; color: var(--ink); }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: #a3481b; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  .hero {
+    padding: 3rem 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.75rem;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem;
+  }
+  .lede { font-size: 1.125rem; color: var(--muted); max-width: 42rem; }
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+    margin-top: 1.25rem; font-size: 0.9rem; color: var(--muted);
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 999px; padding: 0.3rem 0.75rem; font-size: 0.82rem;
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.25rem 1.35rem;
+    box-shadow: var(--shadow); margin-bottom: 1.25rem;
+  }
+  .card.accent-edge { border-left: 4px solid var(--accent); }
+  .pick-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem;
+  }
+  .nav-sticky {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(247,246,243,0.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    margin: 0 -1.25rem 1.5rem; padding: 0.65rem 1.25rem;
+  }
+  .tabs {
+    display: flex; gap: 0.4rem; flex-wrap: wrap;
+  }
+  .tab {
+    appearance: none; border: 1px solid var(--border); background: var(--surface);
+    color: var(--muted); font: inherit; font-weight: 600; font-size: 0.9rem;
+    padding: 0.55rem 0.95rem; border-radius: 999px; cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .tab:hover { border-color: var(--accent); color: var(--ink); }
+  .tab[aria-selected="true"] {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .25s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .itinerary-head {
+    display: grid; gap: 0.75rem; margin-bottom: 1.25rem;
+  }
+  .budget {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0 0;
+  }
+  .budget span {
+    font-size: 0.8rem; font-weight: 600; padding: 0.25rem 0.65rem;
+    border-radius: 6px; background: var(--accent-soft); color: var(--accent);
+  }
+  .budget span.mid { background: #ebe8e1; color: var(--ink); }
+  .budget span.high { background: #1a1a1a; color: #fff; }
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li {
+    position: relative; padding: 0 0 1.35rem 1.35rem;
+    border-left: 2px solid var(--border);
+  }
+  .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -6px; top: 0.35rem;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .time {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.2rem;
+  }
+  .block-title { font-family: "Source Serif 4", Georgia, serif; font-size: 1.1rem; margin: 0 0 0.35rem; }
+  .muted { color: var(--muted); font-size: 0.95rem; }
+  .bookable {
+    margin-top: 0.65rem; padding: 0.75rem 0.9rem;
+    background: var(--canvas); border-radius: 10px; border: 1px dashed var(--border);
+    font-size: 0.92rem;
+  }
+  .bookable strong { display: block; margin-bottom: 0.2rem; }
+  .tag {
+    display: inline-block; font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 0.15rem 0.45rem; border-radius: 4px; margin-right: 0.35rem;
+  }
+  .tag.open { background: #e3f0e9; color: var(--ok); }
+  .tag.closed { background: #f4e4e4; color: var(--closed); }
+  .tag.surcharge { background: #f7efd8; color: var(--warn); }
+  .tag.unverified { background: #ececec; color: var(--muted); }
+  .grid-2 {
+    display: grid; gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 720px) {
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+  }
+  .section { margin: 2.25rem 0 1.25rem; }
+  .section h2 { padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+  table.compare {
+    width: 100%; border-collapse: collapse; font-size: 0.9rem;
+    background: var(--surface); border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  table.compare th, table.compare td {
+    text-align: left; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.compare th { background: #efece6; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.compare tr:last-child td { border-bottom: none; }
+  .callout {
+    background: var(--accent-soft); border-radius: var(--radius);
+    padding: 1rem 1.15rem; margin: 1rem 0;
+  }
+  .callout.urgent { background: #f7efd8; border: 1px solid #e6d19a; }
+  .callout h3 { margin-bottom: 0.4rem; font-size: 1.05rem; }
+  ul.clean { margin: 0.4rem 0 0; padding-left: 1.15rem; }
+  ul.clean li { margin-bottom: 0.4rem; }
+  footer {
+    margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--muted);
+  }
+  .src { font-size: 0.8rem; color: var(--muted); }
+  .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0; }
+  .jump a {
+    font-size: 0.82rem; font-weight: 600; text-decoration: none;
+    padding: 0.35rem 0.7rem; border-radius: 8px; background: var(--surface);
+    border: 1px solid var(--border); color: var(--ink);
+  }
+  .jump a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Perth · Couple of 2 · AWST</div>
+      <h1>1-year anniversary plan</h1>
+      <p class="lede">Sunday 4 October 2026 — three complete, bookable day paths. Compare side-by-side, pick the vibe that fits, then lock the must-books tonight.</p>
+      <div class="meta-row">
+        <span class="chip">☀ Spring Sunday · Perth</span>
+        <span class="chip">Research live · Oct 2026 sources</span>
+        <span class="chip">All times AWST</span>
+      </div>
+      <div class="jump">
+        <a href="#compare">Compare paths</a>
+        <a href="#book-now">Book tonight</a>
+        <a href="#gifts">Sunday gifts</a>
+        <a href="#sunday-notes">Sunday caveats</a>
+        <a href="#backups">Weather backups</a>
+      </div>
+    </header>
+
+    <section class="card accent-edge" aria-label="Soft top pick">
+      <div class="pick-label">Soft guidance · top recommended pick</div>
+      <h2 style="margin-bottom:0.35rem">Romantic · Kings Park sunset + Madeleine dinner</h2>
+      <p class="muted" style="margin:0">Why: Sunday-open French bistro with strong independent reviews, walkable Highgate intimacy, and Frasers/6HEAD as alternate view dinners — no ferry risk, no Swan Valley driving fatigue. Soft pick only; Adventure and Chill-Luxury are equally complete below.</p>
+    </section>
+
+    <div class="nav-sticky" role="navigation" aria-label="Itinerary tabs">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="tab-a" aria-selected="true" aria-controls="panel-a" data-panel="panel-a">A · Romantic</button>
+        <button class="tab" role="tab" id="tab-b" aria-selected="false" aria-controls="panel-b" data-panel="panel-b">B · Adventure · Rottnest</button>
+        <button class="tab" role="tab" id="tab-c" aria-selected="false" aria-controls="panel-c" data-panel="panel-c">C · Chill-Luxury</button>
+      </div>
+    </div>
+
+    <!-- ========== A ROMANTIC ========== -->
+    <section id="panel-a" class="panel active" role="tabpanel" aria-labelledby="tab-a">
+      <div class="itinerary-head">
+        <h2>A · Romantic</h2>
+        <p class="muted">Slow city day: State Buildings brunch → Kings Park golden-hour → candlelit French dinner in Highgate. Zero ferry dependency.</p>
+        <div class="budget">
+          <span>Under $300 possible</span>
+          <span class="mid">Sweet spot $300–600</span>
+          <span class="high">Splurge $600+</span>
+        </div>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="time">8:30 – 10:30 · Brunch</div>
+          <h3 class="block-title">Petition · State Buildings</h3>
+          <p class="muted">Weekend brunch in the CBD heritage precinct. Official hours Sat–Sun 8am–9pm. Walk-ins common; call ahead for a table if you want a quieter corner.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday open</span> Petition</strong>
+            Cnr St Georges Tce &amp; Barrack St, Perth<br />
+            Book / enquire: State Buildings +61 8 6168 7888 · <a href="https://statebuildings.com/venues/petition" target="_blank" rel="noopener">statebuildings.com/venues/petition</a><br />
+            <span class="src">Verified: first-party State Buildings page (hours Sat–Sun 8AM–9PM).</span>
+          </div>
+          <div class="bookable">
+            <strong>Alt brunch · Bib &amp; Tucker (North Freo)</strong>
+            Beach dunes, Wed–Sun 8am–10pm. Better if you want ocean air before Kings Park later.<br />
+            18 Leighton Beach Blvd · (08) 9433 2147 · <a href="https://bibandtucker.net.au/" target="_blank" rel="noopener">bibandtucker.net.au</a><br />
+            <span class="src">Verified: first-party site opening hours.</span>
+          </div>
+        </li>
+        <li>
+          <div class="time">11:00 – 12:30 · Small gesture pickup</div>
+          <h3 class="block-title">Perth Mint Shop · jewellery / keepsake</h3>
+          <p class="muted">Shop open Sunday 9am–5pm (bullion trading closed Sundays). Pair with chocolates afterward — see Gifts section. Order flowers <em>Saturday</em>; most florists do not deliver Sunday.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday open</span> The Perth Mint Shop</strong>
+            310 Hay St, East Perth · 1800 926 468 · <a href="https://www.perthmint.com/visit/visitor-information/" target="_blank" rel="noopener">perthmint.com/visit</a>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:00 – 16:30 · Optional spa or park</div>
+          <h3 class="block-title">COMO Shambhala · or Kings Park picnic</h3>
+          <p class="muted">Spa: daily 10am–6pm; <span class="tag surcharge">10% Sunday surcharge</span> on treatments (first-party menu PDF). Or skip spa and linger in Kings Park — Synergy Parkland / Fraser Ave lookouts — DIY picnic from a CBD deli.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday open</span> COMO Shambhala The Treasury</strong>
+            Ground Floor, 1 Cathedral Ave · +61 8 6168 7877 · <a href="https://statebuildings.com/venues/como-shambhala-the-treasury" target="_blank" rel="noopener">Book via State Buildings / hotel</a><br />
+            <span class="src">Hours verified State Buildings. Sunday surcharge verified COMO treatment menu PDF.</span>
+          </div>
+          <div class="bookable">
+            <strong>Alt spa · Crown Spa</strong>
+            Sun–Thu 9am–5pm · <span class="tag surcharge">Fri–Sun surcharge</span> · (08) 9362 8533 · <a href="https://www.crownperth.com.au/hotels/crown-spa" target="_blank" rel="noopener">crownperth.com.au/hotels/crown-spa</a>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:00 – 18:30 · Golden hour</div>
+          <h3 class="block-title">Kings Park sunset walk</h3>
+          <p class="muted">Free. Aim for Fraser Avenue / DNA Tower side for river + city. Early Oct sunset ~18:10–18:20 AWST <span class="tag unverified">confirm day-of BOM</span>. Bring a light jacket — spring evenings cool down.</p>
+        </li>
+        <li>
+          <div class="time">19:00 / 19:30 · Anniversary dinner</div>
+          <h3 class="block-title">Primary: Madeleine on Beaufort</h3>
+          <p class="muted">Intimate French bistro, Highgate. Sat–Sun from 3pm till late. Degustation ~$135 pp (Wed–Thu special lower — not Sunday). West Australian review praises French cooking; guest reviews strong on special occasions. 2-hour sittings.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday open 3pm–late</span> Madeleine</strong>
+            487 Beaufort St, Highgate · <a href="https://www.madeleineonbeaufort.com.au/bookings" target="_blank" rel="noopener">Online bookings</a> · bookings@madeleine487.com.au<br />
+            Taste sources: <em>The West Australian</em> restaurant review + first-party site + guest reviews on venue site.<br />
+            <span class="src">Hours + menus verified madeleineonbeaufort.com.au (fetched).</span>
+          </div>
+          <div class="bookable">
+            <strong>View dinner alt · Frasers (Kings Park)</strong>
+            Mon–Sun all-day from 11:30am till late. Sunday long lunch culture + dinner. Not on OpenTable.<br />
+            (08) 9482 0100 · reservations@frasersrestaurant.com.au · <a href="https://www.frasersrestaurant.com.au/restaurant/" target="_blank" rel="noopener">frasersrestaurant.com.au</a><br />
+            <span class="src">Hours verified first-party. Independent reviews mixed on value — book for the view + occasion, not as “best food in Perth.”</span>
+          </div>
+          <div class="bookable">
+            <strong>Steak + quay alt · 6HEAD Elizabeth Quay</strong>
+            Sunday 12:00–9:30pm · <span class="tag surcharge">5% Sunday surcharge</span> · live music Sun lunch 12:30–3:30.<br />
+            (08) 6163 8888 · <a href="https://6head.com.au/bookings/perth/" target="_blank" rel="noopener">Book online</a><br />
+            Taste sources: WA Good Food Guide listing + WA Today / Good Food review (Max Veenhuyzen) + first-party site.
+          </div>
+        </li>
+      </ul>
+
+      <div class="grid-2" style="margin-top:1.5rem">
+        <div class="card">
+          <h3>Path A backups</h3>
+          <ul class="clean">
+            <li>Rain: swap park for WA Museum Boola Bardip (Sun 9:30–5) or Art Gallery of WA (Sun 10–5), then dinner as booked.</li>
+            <li>Madeleine full: Frasers or 6HEAD (both Sunday-open).</li>
+            <li>Spa full: DIY park picnic + Cape Arid Rooms afternoon tea at Treasury <span class="tag unverified">confirm Sunday hours day-of</span>.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Path A budget (couple, day)</h3>
+          <ul class="clean">
+            <li><strong>Under $300:</strong> Petition brunch + park + Madeleine à la carte careful + BYO gesture.</li>
+            <li><strong>$300–600:</strong> Brunch + Mint gift + Madeleine degustation or 6HEAD dinner + wine.</li>
+            <li><strong>Splurge:</strong> Dual spa + 6HEAD wagyu + Champagne at Madeleine.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== B ADVENTURE ========== -->
+    <section id="panel-b" class="panel" role="tabpanel" aria-labelledby="tab-b">
+      <div class="itinerary-head">
+        <h2>B · Adventure · Rottnest day-trip</h2>
+        <p class="muted">Realistic Sunday ferry window (26 Sep–11 Oct timetable): early out, last Rotto departure <strong>5:30pm</strong> in this period — then Freo markets + dinner. Do <em>not</em> plan CBD fine dining after a late return.</p>
+        <div class="budget">
+          <span>Under $300 tight</span>
+          <span class="mid">Sweet spot $300–600</span>
+          <span class="high">Splurge $600+</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h3>Ferry realism · Sun 4 Oct 2026</h3>
+        <p class="muted" style="margin:0">SeaLink published timetable for <strong>26 September – 11 October 2026</strong>: Perth Barrack Street departure <strong>8:30am</strong>; Fremantle O’Connor Landing from <strong>7:00am</strong>. Returns from Rottnest include <strong>5:30pm</strong> as the late service in this window (later 7:00pm returns start in the 12 Oct+ Fri–Sun table). Confirm day-of on SeaLink booking — weather cancellations happen. <a href="https://www.sealink.com.au/rottnest-island/ferry-information/ferry-timetable/" target="_blank" rel="noopener">Official timetable</a>.</p>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="time">06:45 – 07:30 · Depart Fremantle (preferred)</div>
+          <h3 class="block-title">SeaLink · O’Connor Landing</h3>
+          <p class="muted">Earlier Freo sailings maximise island time. Perth 8:30am also works — shorter island day. Book return seats now; Sunday can sell out in spring.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday service</span> SeaLink Rottnest</strong>
+            Book: <a href="https://www.sealink.com.au/rottnest-island/" target="_blank" rel="noopener">sealink.com.au/rottnest-island</a><br />
+            Adult return fares published from ~$90 Freo same-day (admission included in some fare types) — <span class="tag unverified">reconfirm exact Oct 4 price in booking engine</span> (fare page bot-walled during research).<br />
+            Alt: Rottnest Express / Rottnest Fast Ferries (Hillarys) — different terminals; Fast Ferries Oct 23+ timetable period does not cover 4 Oct — check current.
+          </div>
+        </li>
+        <li>
+          <div class="time">~08:30 – 15:30 · On island</div>
+          <h3 class="block-title">Bikes · bays · quokkas · lunch</h3>
+          <p class="muted">Hire bikes at the settlement on arrival (or pre-book bundles with ferry). Circuit: Thomson Bay → Geordie/Longreach → lunch → snorkel if calm. Carry water &amp; cashless card.</p>
+          <div class="bookable">
+            <strong>Island lunch</strong>
+            Settlement cafés / hotel — hours vary by season. <span class="tag unverified">Book or queue-plan day-of; not independently verified for 4 Oct menus.</span>
+            Pack snacks from Freo if you want a picnic bay lunch.
+          </div>
+        </li>
+        <li>
+          <div class="time">By 17:00 · Board last practical return</div>
+          <h3 class="block-title">Aim for ≤5:30pm departure from Rotto</h3>
+          <p class="muted">Build a 45–60 min buffer before last sailing. Checking in late risks overnighting with no ferry. Weather: operator may cancel — have Path A/C backup ready.</p>
+        </li>
+        <li>
+          <div class="time">18:00 – 19:00 · Fremantle Markets (if energy)</div>
+          <h3 class="block-title">Sunday markets · gifts &amp; street food</h3>
+          <div class="bookable">
+            <strong><span class="tag open">Sunday open</span> Fremantle Markets</strong>
+            Yard 8am–6pm · Hall 9am–6pm · Fri–Sun (+ PH Mondays)<br />
+            74 South Terrace · (08) 9335 2515 · <a href="https://fremantlemarkets.com.au/" target="_blank" rel="noopener">fremantlemarkets.com.au</a><br />
+            <span class="src">Verified first-party trading hours page.</span>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:00 – late · Dinner Freo / North Freo</div>
+          <h3 class="block-title">Bread in Common or Bib &amp; Tucker</h3>
+          <div class="bookable">
+            <strong><span class="tag open">Sun 12pm–10pm</span> Bread in Common</strong>
+            Shared plates + wood-fired bread · 43 Pakenham St, Freo · 0449 588 404 · <a href="https://breadincommon.com.au/bookings/" target="_blank" rel="noopener">bookings</a>
+          </div>
+          <div class="bookable">
+            <strong><span class="tag open">Wed–Sun 8am–10pm</span> Bib &amp; Tucker</strong>
+            Beachfront special-occasion · (08) 9433 2147 · <a href="https://bibandtucker.net.au/reservations/" target="_blank" rel="noopener">reservations</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="grid-2" style="margin-top:1.5rem">
+        <div class="card">
+          <h3>Path B backups</h3>
+          <ul class="clean">
+            <li>Ferry cancelled: flip to Fremantle Markets morning + Bib &amp; Tucker long lunch + Kings Park sunset (Path A evening) or Swan Valley (Path C midday).</li>
+            <li>Rough seas / tired: skip markets, dinner only at Bread in Common.</li>
+            <li>Want CBD dinner anyway: take earliest return (~2:30–4:00pm Rotto dep) and book 6HEAD 7:30pm — tight but doable.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Path B budget (couple, day)</h3>
+          <ul class="clean">
+            <li><strong>Under $300:</strong> Ferry returns + bike hire + packed lunch + casual Freo dinner — tight.</li>
+            <li><strong>$300–600:</strong> Ferries + bikes + island lunch + Bib &amp; Tucker dinner + drinks.</li>
+            <li><strong>Splurge:</strong> Premium ferry seats + snorkel hire + seafood dinner + Uber both ways.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== C CHILL LUXURY ========== -->
+    <section id="panel-c" class="panel" role="tabpanel" aria-labelledby="tab-c">
+      <div class="itinerary-head">
+        <h2>C · Chill-Luxury · Spa + Swan Valley</h2>
+        <p class="muted">Morning spa, then vineyard lunch (Sandalford Sunday lunch service or Mandoon Wild Swan), cellar door stroll, return for Elizabeth Quay dinner or Captain Cook evening cruise.</p>
+        <div class="budget">
+          <span>Under $300 unlikely</span>
+          <span class="mid">Sweet spot $300–600</span>
+          <span class="high">Natural fit $600+</span>
+        </div>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="time">09:00 – 11:00 · Spa</div>
+          <h3 class="block-title">Crown Spa or COMO Shambhala</h3>
+          <div class="bookable">
+            <strong><span class="tag open">Sun 9–5</span> Crown Spa</strong>
+            Arrive 60 min early for Aqua Retreat (treatments ≥1 hr). <span class="tag surcharge">Fri–Sun surcharge</span>. (08) 9362 8533 · <a href="https://www.crownperth.com.au/hotels/crown-spa" target="_blank" rel="noopener">Book</a>
+          </div>
+          <div class="bookable">
+            <strong><span class="tag open">Daily 10–6</span> COMO Shambhala</strong>
+            <span class="tag surcharge">10% Sunday</span> · +61 8 6168 7877 · CBD-convenient before Valley drive.
+          </div>
+        </li>
+        <li>
+          <div class="time">11:45 – 15:00 · Swan Valley lunch</div>
+          <h3 class="block-title">Sandalford Restaurant · Sunday lunch</h3>
+          <p class="muted">Official Sunday lunch <strong>11:30am–3pm</strong> only (no Sunday dinner). Cellar door daily 10am–5pm. Drive ~30–40 min from CBD / Crown.</p>
+          <div class="bookable">
+            <strong><span class="tag open">Sun lunch 11:30–3</span> Sandalford Swan Valley</strong>
+            3210 West Swan Rd, Caversham · (08) 9374 9374 · <a href="https://sandalford.com/the-restaurant" target="_blank" rel="noopener">sandalford.com/the-restaurant</a><br />
+            <span class="src">Hours verified first-party restaurant page.</span>
+          </div>
+          <div class="bookable">
+            <strong>Fine-dining alt · Wild Swan @ Mandoon</strong>
+            Breakfast daily 7:30–10 · Lunch Fri–Sun 12–3 · Dinner Fri–Sat only (not Sunday night).<br />
+            10 Harris Rd, Caversham · (08) 6279 0500 · hello@mandoonestate.com.au · <a href="https://mandoonestate.com.au/eat-drink/wild-swan" target="_blank" rel="noopener">mandoonestate.com.au</a>
+          </div>
+          <div class="bookable">
+            <strong>Private tour option</strong>
+            Several operators offer Sunday Swan Valley private tours (Mercedes / car-and-driver). Example listings from ~$445/group — <span class="tag unverified">quote &amp; Sunday availability must be confirmed operator-by-operator</span>. Self-drive + designated driver is simpler if only two people.
+          </div>
+        </li>
+        <li>
+          <div class="time">15:00 – 16:30 · Cellar door / chocolate / slow drive back</div>
+          <h3 class="block-title">Sandalford cellar door · gift tasting pack</h3>
+          <p class="muted">Keep alcohol light if driving. Uber/private transfer recommended for a true luxury feel.</p>
+        </li>
+        <li>
+          <div class="time">19:00 – late · Dinner or river cruise</div>
+          <h3 class="block-title">6HEAD · or Captain Cook dinner cruise</h3>
+          <div class="bookable">
+            <strong><span class="tag open">Sun to 9:30pm</span> 6HEAD</strong>
+            Elizabeth Quay views after Valley day. <span class="tag surcharge">5% Sunday</span> · (08) 6163 8888 · <a href="https://6head.com.au/bookings/perth/" target="_blank" rel="noopener">Book</a><br />
+            Independent taste: WA Good Food Guide + WA Today/Good Food review.
+          </div>
+          <div class="bookable">
+            <strong>River evening · Captain Cook Swan River Dinner Cruise</strong>
+            ~2.5 hr buffet cruise from Pier 3 Barrack St · from ~$160 adult · open most days except Christmas Day.<br />
+            (08) 9325 3341 · <a href="https://www.captaincookcruises.com.au/cruises/dinner-cruises/" target="_blank" rel="noopener">captaincookcruises.com.au</a><br />
+            <span class="tag unverified">Confirm Sun 4 Oct sailing &amp; time in booking calendar</span> — schedules change; call reservations.
+          </div>
+          <div class="bookable">
+            <strong>Intimate alt · Madeleine</strong>
+            If you want French over steak/cruise — book 7:30pm Highgate (see Path A).
+          </div>
+        </li>
+      </ul>
+
+      <div class="grid-2" style="margin-top:1.5rem">
+        <div class="card">
+          <h3>Path C backups</h3>
+          <ul class="clean">
+            <li>Valley too far / rain: spa morning + Petition long lunch + indoor Cultural Centre + 6HEAD dinner.</li>
+            <li>Sandalford full: Wild Swan lunch (Fri–Sun) or cellar-door platter + CBD dinner.</li>
+            <li>Cruise cancelled: 6HEAD or Madeleine hold as land dinner.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Path C budget (couple, day)</h3>
+          <ul class="clean">
+            <li><strong>Under $300:</strong> Skip spa; Sandalford lunch + free park — possible but not “luxury.”</li>
+            <li><strong>$300–600:</strong> One shared spa block + Valley lunch + careful 6HEAD.</li>
+            <li><strong>Splurge $600–1000+:</strong> Dual treatments + private transfer + Wild Swan + cruise or wagyu.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="section" id="compare">
+      <h2>Compare the three paths</h2>
+      <div style="overflow-x:auto">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th>A Romantic</th>
+              <th>B Adventure</th>
+              <th>C Chill-Luxury</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Energy</strong></td>
+              <td>Low–medium</td>
+              <td>High (early start)</td>
+              <td>Low, indulgent</td>
+            </tr>
+            <tr>
+              <td><strong>Weather risk</strong></td>
+              <td>Low (indoor dinner)</td>
+              <td>High (ferry)</td>
+              <td>Medium (valley drive)</td>
+            </tr>
+            <tr>
+              <td><strong>Must book first</strong></td>
+              <td>Madeleine or Frasers / 6HEAD</td>
+              <td>SeaLink return seats</td>
+              <td>Spa + Sandalford / Wild Swan</td>
+            </tr>
+            <tr>
+              <td><strong>Dinner vibe</strong></td>
+              <td>Intimate French / park views</td>
+              <td>Relaxed Freo</td>
+              <td>Steakhouse or river cruise</td>
+            </tr>
+            <tr>
+              <td><strong>Sunday closed traps</strong></td>
+              <td>Wildflower / Print Hall / Lalla Rookh</td>
+              <td>Late CBD dinner after 5:30 return</td>
+              <td>Sandalford &amp; Wild Swan — no Sun dinner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- BOOK NOW -->
+    <section class="section" id="book-now">
+      <h2>Must-book-now</h2>
+      <div class="callout urgent">
+        <h3>Urgency · anniversary is in ~3 days</h3>
+        <ul class="clean">
+          <li><strong>Tonight:</strong> Lock dinner for your preferred path — Madeleine online, Frasers (08) 9482 0100, 6HEAD online, or Bib &amp; Tucker / Bread in Common for Path B.</li>
+          <li><strong>Tonight / tomorrow morning:</strong> SeaLink ferry return seats if Path B — Sunday spring sailings fill.</li>
+          <li><strong>Tomorrow:</strong> Spa appointments (Crown / COMO) — Sunday slots + surcharges.</li>
+          <li><strong>Saturday:</strong> Flowers for Sunday — <em>most Perth florists do not deliver Sunday</em>. Order Sat before cut-off (often 12–4pm).</li>
+          <li><strong>Also:</strong> Captain Cook cruise calendar if Path C evening on water; Sandalford / Wild Swan lunch table.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GIFTS -->
+    <section class="section" id="gifts">
+      <h2>Gifts &amp; same-day Sunday pickup</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3><span class="tag closed">Often closed Sun</span> Florists</h3>
+          <p class="muted">Perth Petals, Sarah’s Flowers, A Mano, St Anne’s and Spearwood Florist advertise Mon–Sat same-day — <strong>no Sunday delivery</strong> in sources checked. <strong>Order Saturday</strong> for Saturday delivery or Monday note, or pick up supermarket blooms Sunday morning.</p>
+        </div>
+        <div class="card">
+          <h3><span class="tag open">Sunday open</span> Verified pickups</h3>
+          <ul class="clean">
+            <li><strong>Perth Mint Shop</strong> — jewellery / coins / gifts · Sun 9–5 · 310 Hay St · <a href="https://www.perthmint.com/visit/the-perth-mint-shop/" target="_blank" rel="noopener">Shop info</a></li>
+            <li><strong>Fremantle Markets</strong> — handmade gifts · Sun to 6pm</li>
+            <li><strong>Koko Black</strong> — chocolate · CBD/Claremont listed with Sunday trading in directories — <span class="tag unverified">confirm specific store hours day-of</span></li>
+            <li>Coles / Woolworths floral — generally open Sundays <span class="tag unverified">suburb-dependent</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUNDAY NOTES -->
+    <section class="section" id="sunday-notes">
+      <h2>Sunday in Perth · closed, limited, surcharges</h2>
+      <div class="card">
+        <ul class="clean">
+          <li><span class="tag closed">Closed Sunday</span> <strong>Wildflower</strong> (COMO) — dinner Tue–Sat only. Do not plan here.</li>
+          <li><span class="tag closed">Closed Sunday</span> <strong>Print Hall</strong> venues &amp; <strong>Lalla Rookh</strong> — not Sunday options.</li>
+          <li><span class="tag closed">No Sunday dinner</span> Sandalford restaurant (lunch only) · Wild Swan dinner Fri–Sat only.</li>
+          <li><span class="tag surcharge">5% Sunday</span> 6HEAD · <span class="tag surcharge">10% Sunday</span> COMO Shambhala treatments · Crown Spa Fri–Sun surcharge (rate not published as a %). Many cafés add 10–15% — ask when booking.</li>
+          <li><span class="tag open">Sunday heroes</span> Frasers · 6HEAD · Madeleine · Petition · Bib &amp; Tucker · Bread in Common · Fremantle Markets · Perth Mint Shop · SeaLink · Crown/COMO spas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BACKUPS -->
+    <section class="section" id="backups">
+      <h2>Weather &amp; booking-fail backups</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Indoor cultural</h3>
+          <ul class="clean">
+            <li>WA Museum Boola Bardip — Sun ~9:30am–5pm · <a href="https://visit.museum.wa.gov.au/boolabardip" target="_blank" rel="noopener">visit.museum.wa.gov.au</a></li>
+            <li>Art Gallery of WA — Sun 10am–5pm · Perth Cultural Centre</li>
+            <li>Crown complex dining / spa if valley or Rotto fails</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Covered dining</h3>
+          <ul class="clean">
+            <li>State Buildings cluster (Petition + surrounds)</li>
+            <li>Elizabeth Quay arcades + 6HEAD atrium</li>
+            <li>Fremantle Markets Hall (covered) if outdoor Freo is wet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Research notes:</strong> Hours and surcharges pulled live from first-party sites (Frasers, 6HEAD, Madeleine, Petition/State Buildings, Bib &amp; Tucker, Bread in Common, SeaLink timetable pages, Sandalford, Mandoon Wild Swan, Crown Spa, COMO Shambhala, Fremantle Markets, Perth Mint) on 1 Oct 2026. Prices and exact Oct 4 inventory can change — always reconfirm in the booking tool.</p>
+      <p><strong>Could not fully verify:</strong> Exact SeaLink adult fare quote for 4 Oct (Cloudflare on fare page); Captain Cook sailing specifically on Sun 4 Oct; Koko Black store-by-store Sunday hours; private picnic operators with Sunday hire in Kings Park; precise sunset time (use BOM day-of); supermarket florist stock.</p>
+      <p>Built for Biggles · Couple of 2 · Sunday 4 October 2026 AWST · Local path <code>/workspace/perth-anniversary-plan/index.html</code></p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.tab');
+      var panels = document.querySelectorAll('.panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var id = tab.getAttribute('data-panel');
+          tabs.forEach(function (t) { t.setAttribute('aria-selected', 'false'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          tab.setAttribute('aria-selected', 'true');
+          document.getElementById(id).classList.add('active');
+          history.replaceState(null, '', '#' + id.replace('panel-', 'path-'));
+        });
+      });
+      var hash = location.hash.replace('#', '');
+      if (hash === 'path-b') document.getElementById('tab-b').click();
+      if (hash === 'path-c') document.getElementById('tab-c').click();
+    })();
+  </script>
+</body>
+</html>
